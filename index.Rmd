@@ -13,7 +13,7 @@
 
 I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D and [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/). My other research interests are intractable likelihood and importance sampling. 
 
-Beside doing research, I enjoy teaching short courses on GAM modelling (see "Training" section), so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
+Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
 
 <br>
 

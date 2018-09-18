@@ -13,7 +13,7 @@ The following packages are part of the output of my research on GAM models:
    
 <br>
    
-I have also authored the following packages, relate to my research on Monte Carlo methods and intractable likelihoods:
+I have also authored the following packages, related to my research on Monte Carlo methods and intractable likelihoods:
 
    - **mvnfast**: fast multivariate normal and student's t methods. See the github [source code](https://github.com/mfasiolo/mvnfast) and the [online manual](http://mfasiolo.github.io/mvnfast/). Available on [CRAN](https://cran.r-project.org/web/packages/mvnfast/index.html).
    
