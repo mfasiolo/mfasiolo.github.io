@@ -1,0 +1,37 @@
+
+<br>
+
+## About me
+
+<br>
+
+<center>
+<img src="me_serious.jpg" alt="drawing" style="width:600px;"/> 
+</center>
+
+<br>
+
+I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D and [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/). My other research interests are intractable likelihood and importance sampling. 
+
+Beside doing research, I enjoy teaching short courses on GAM modelling (see "Training" section), so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
+
+<br>
+
+
+## News
+
+**Publications**
+
+  - Aug18: as [Scott Sisson announced on Twitter](https://twitter.com/ABC_Research/status/1032218764719214592), the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled "Approximate methods for dynamic ecological models", where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. An free [Arxiv version](https://arxiv.org/abs/1511.02644) of the chapter is also available.
+  
+  - May18: our paper titled "An extended empirical saddlepoint approximation for intractable likelihoods" has been [published](https://projecteuclid.org/euclid.ejs/1527300140) on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.   
+
+**Training** 
+
+  - Jul18: I have thought an introductory course on GAM modelling using the [mgcv](https://cran.r-project.org/web/packages/mgcv/index.html), [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) and [qgam](http://mfasiolo.github.io/qgam/) R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed [here](https://www.youtube.com/watch?v=a6sTwkQGt3E&t=50s) and [here](https://www.youtube.com/watch?v=44UUBuF9RFM), while all the material (slides, exercises and solutions) can be found [here](https://github.com/mfasiolo/workshop_UseR18).  
+
+**Software**
+
+  - Jul18: the mgcViz R package has finally arrived on CRAN. It contains quite a lot of new visualizations and diagnostics for GAMs models, mostly implemented in ggplot2. 
+  
+  - May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new "Bayesian sandwich" calibration method can be found in our [Arxived paper](https://arxiv.org/abs/1707.03307).

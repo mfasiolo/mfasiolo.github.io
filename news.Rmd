@@ -1,0 +1,12 @@
+---
+title: "News"
+output: html_document
+---
+
+<br> 
+
+## Events I am attending:
+
+<br> 
+
+- 11th – 14th June 2018 I will be attending [Models2Decisions](http://blogs.exeter.ac.uk/models2decisions/events/m2d-2018-annual-conference/) conference on decision making under uncertainty and presenting a poster on: "Overcoming the “valley of death” – Transferring tools and expertise on sensitivity analysis to the (re)insurance sector"

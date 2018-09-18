@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Matteo Fasiolo</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="GSA-SAFE.html">
+    <span class="fa fa-cubes"></span>
+     
+    Sofware
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Contact_me.html">
+    <span class="fa fa-envelope-o"></span>
+     
+    Contact me
+  </a>
+</li>
+<li>
+  <a href="https://github.com/mfasiolo">
+    <span class="fa fa-github"></span>
+     
+    GitHub
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="about-me" class="section level2">
+<h2>About me</h2>
+<p><br></p>
+<center>
+<img src="me_serious.jpg" alt="drawing" style="width:600px;"/>
+</center>
+<p><br></p>
+<p>I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&amp;D and <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a>. My other research interests are intractable likelihood and importance sampling.</p>
+<p>Beside doing research, I enjoy teaching short courses on GAM modelling (see “Training” section), so if you are interested in organizing one don’t hesitate to <a href="mailto:matteo.fasiolo@gmail.com">contact me</a>.</p>
+<p><br></p>
+</div>
+<div id="news" class="section level2">
+<h2>News</h2>
+<p><strong>Publications</strong></p>
+<ul>
+<li><p>Aug18: as <a href="https://twitter.com/ABC_Research/status/1032218764719214592">Scott Sisson announced on Twitter</a>, the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled “Approximate methods for dynamic ecological models”, where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. An free <a href="https://arxiv.org/abs/1511.02644">Arxiv version</a> of the chapter is also available.</p></li>
+<li><p>May18: our paper titled “An extended empirical saddlepoint approximation for intractable likelihoods” has been <a href="https://projecteuclid.org/euclid.ejs/1527300140">published</a> on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.</p></li>
+</ul>
+<p><strong>Training</strong></p>
+<ul>
+<li>Jul18: I have thought an introductory course on GAM modelling using the <a href="https://cran.r-project.org/web/packages/mgcv/index.html">mgcv</a>, <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> and <a href="http://mfasiolo.github.io/qgam/">qgam</a> R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed <a href="https://www.youtube.com/watch?v=a6sTwkQGt3E&amp;t=50s">here</a> and <a href="https://www.youtube.com/watch?v=44UUBuF9RFM">here</a>, while all the material (slides, exercises and solutions) can be found <a href="https://github.com/mfasiolo/workshop_UseR18">here</a>.</li>
+</ul>
+<p><strong>Software</strong></p>
+<ul>
+<li><p>Jul18: the mgcViz R package has finally arrived on CRAN. It contains quite a lot of new visualizations and diagnostics for GAMs models, mostly implemented in ggplot2.</p></li>
+<li><p>May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new “Bayesian sandwich” calibration method can be found in our <a href="https://arxiv.org/abs/1707.03307">Arxived paper</a>.</p></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

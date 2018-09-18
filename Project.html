@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Project Information</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Matteo Fasiolo</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="GSA-SAFE.html">
+    <span class="fa fa-cubes"></span>
+     
+    Sofware
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Contact_me.html">
+    <span class="fa fa-envelope-o"></span>
+     
+    Contact me
+  </a>
+</li>
+<li>
+  <a href="https://github.com/mfasiolo">
+    <span class="fa fa-github"></span>
+     
+    GitHub
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Project Information</h1>
+
+</div>
+
+
+<p><br></p>
+<div id="background-information-on-the-project" class="section level2">
+<h2>Background Information on the Project</h2>
+<p>Insurance companies provide insurance against a wide range of threats, such as natural hazards. Losses from natural disasters are increasing globally (in 2017 they were estimated to be USD 340 billion) [1]. To monitor risk and support investment decisions, insurance companies often use mathematical models to help calculate fair and robust risk premiums, and to ensure appropriate capital allocation, such that there is little risk of the company finding itself in financial trouble should deleterious events occur. While these models are essential tools to improve transparency of an insurer’s risk profile, their development is costly. Moreover, the insurance sector faces increasing regulation (European Solvency II) [2]; which requires them to test their capital models in a way that uncertainties are adequately captured, and plans are in place to assess the risks and how to mitigate them. Nonetheless, there is a lack of standardised regulatory guidelines for model validation. Building and testing mathematical models constitute a high cost for insurance companies, and it is a time intensive activity, which conflicts with the high day-to-day workload.</p>
+<p><br></p>
+</div>
+<div id="project-summary" class="section level2">
+<h2>Project Summary</h2>
+<p>The project aims to transfer methods and tools (i.e. Global Sensitivity Analysis (GSA) and the SAFE software toolbox) developed in academia and funded by NERC projects to the (re)insurance industry and to tailor them in such a way to facilitate their uptake in the insurance industry. This will equip them with tools to better capture the risks and the uncertainties embedded in their models, and with more structured approaches to validate their models. Therefore this will increase the robustness of their financial decisions. An increased understanding and consideration of uncertainty in the insurance modelling process can only promote a more continuous and aware use of model predictions to support financial decision-making. This will be driven by an adequate quantification of risks and vulnerability due to possible models flaws, therefore leading to better-informed and more robust business decisions. This in turn will strengthen the leading position of the UK in the area. Ultimately this will increase the transparency of an insurer’s risk profile, contribute to reduce and manage financial risk, reduce capital requirements and stabilise earning.</p>
+<p><br></p>
+</div>
+<div id="summary-of-project-activities" class="section level2">
+<h2>Summary of Project Activities</h2>
+<p>In the first stage of my fellowship project, I build on the existing collaboration with the (re)insurance company XL Catlin to review how numerical models, e.g. pricing models, are developed, validated and used within their company. I will develop pilot applications, tailored versions of the SAFE toolbox for (re)insurance (e.g. in Excel and R language) and detailed workflows which will form the basis to transfer expertise on the use of GSA methods in the (re)insurance sector.</p>
+<p>This material will be the building block for disseminating best practices across the wider (re)insurance industry. This will be achieved both by collaborating with the OASIS LMF consortium - including a tailored version of SAFE in their open access platform as the standard methodology for rigorous model validation - and by holding workshops for the wider (re)insurance industry.</p>
+<p><br></p>
+</div>
+<div id="project-parners" class="section level2">
+<h2>Project Parners</h2>
+<ul>
+<li><a href="http://xlcatlin.com/">XL Catlin</a></li>
+<li><a href="https://oasislmf.org/">OASIS Loss Modelling Framework</a></li>
+</ul>
+<p><br> <br> <br> 1 <a href="https://www.munichre.com/topics-online/en/2018/01/2017-year-in-figures">Munich Re (2018)</a></p>
+<p>2 <a href="https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32009L0138">EC (2009) Directive 2009/138/EC The taking-up and pursuit of the business of Insurance and Reinsurance (Solvency II)</a></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

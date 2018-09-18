@@ -1,0 +1,40 @@
+---
+title: "Project Information"
+---
+
+<br> 
+
+## Background Information on the Project 
+
+Insurance companies provide insurance against a wide range of threats, such as natural hazards. Losses from natural disasters are increasing globally (in 2017 they were estimated to be USD 340 billion) [1]. To monitor risk and support investment decisions, insurance companies often use mathematical models to help calculate fair and robust risk premiums, and to ensure appropriate capital allocation, such that there is little risk of the company finding itself in financial trouble should deleterious events occur. While these models are essential tools to improve transparency of an insurer’s risk profile, their development is costly. Moreover, the insurance sector faces increasing regulation (European Solvency II) [2]; which requires them to test their capital models in a way that uncertainties are adequately captured, and plans are in place to assess the risks and how to mitigate them. Nonetheless, there is a lack of standardised regulatory guidelines for model validation. Building and testing mathematical models constitute a high cost for insurance companies, and it is a time intensive activity, which conflicts with the high day-to-day workload.
+
+<br> 
+
+## Project Summary
+
+The project aims to transfer methods and tools (i.e. Global Sensitivity Analysis (GSA) and the SAFE software toolbox) developed in academia and funded by NERC projects to the (re)insurance industry and to tailor them in such a way to facilitate their uptake in the insurance industry. This will equip them with tools to better capture the risks and the uncertainties embedded in their models, and with more structured approaches to validate their models. Therefore this will increase the robustness of their financial decisions. 
+An increased understanding and consideration of uncertainty in the insurance modelling process can only promote a more continuous and aware use of model predictions to support financial decision-making. This will be driven by an adequate quantification of risks and vulnerability due to possible models flaws, therefore leading to better-informed and more robust business decisions. This in turn will strengthen the leading position of the UK in the area. Ultimately this will increase the transparency of an insurer’s risk profile, contribute to reduce and manage financial risk, reduce capital requirements and stabilise earning.
+
+<br> 
+
+## Summary of Project Activities
+
+In the first stage of my fellowship project, I build on the existing collaboration with the (re)insurance company XL Catlin to review how numerical models, e.g. pricing models, are developed, validated and used within their company. I will develop pilot applications, tailored versions of the SAFE toolbox for (re)insurance (e.g. in Excel and R language) and detailed workflows which will form the basis to transfer expertise on the use of GSA methods in the (re)insurance sector. 
+
+This material will be the building block for disseminating best practices across the wider (re)insurance industry. This will be achieved both by collaborating with the OASIS LMF consortium - including a tailored version of SAFE in their open access platform as the standard methodology for rigorous model validation - and by holding workshops for the wider (re)insurance industry. 
+
+<br> 
+
+## Project Parners
+- [XL Catlin](http://xlcatlin.com/)
+- [OASIS Loss Modelling Framework](https://oasislmf.org/)
+
+
+
+<br> 
+<br> 
+<br> 
+1 [Munich Re (2018)](https://www.munichre.com/topics-online/en/2018/01/2017-year-in-figures)
+
+2 [EC (2009) Directive 2009/138/EC The taking-up and pursuit of the business of Insurance and Reinsurance (Solvency II)](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32009L0138)
+

@@ -1,0 +1,35 @@
+name: "Matteo Fasiolo"                                # CHANGE HERE 
+output_dir: "."
+navbar:
+  title: "Matteo Fasiolo"                             # CHANGE HERE 
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    #- text: "Publications"
+    #  icon: fa-paper-plane 
+    #  href: Project.html
+    - text: "Sofware"
+      icon: fa-cubes 
+      href: GSA-SAFE.html
+    #- text: "Blog"
+     # icon: fa-rss
+     # href: https://YOURGITHUB.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES
+    #- text: "News"
+    #  icon: fa-newspaper-o
+    #  href: news.html  # CHANGE HERE OR DELETE ALL 3 LINES
+    #- text: "Outputs"
+    #  icon: fa-file-pdf-o
+    #  href: Outputs.html  # CHANGE HERE OR DELETE ALL 3 LINES 
+  right:
+    - text: "Contact me"
+      icon: fa-envelope-o
+      href: Contact_me.html   # CHANGE HERE 
+    - text: "GitHub"
+      icon: fa-github
+      href: https://github.com/mfasiolo       # CHANGE HERE 
+output:
+  html_document:
+    theme: spacelab
+    highlight: espresso
