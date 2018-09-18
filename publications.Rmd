@@ -1,0 +1,23 @@
+
+<br> 
+
+#### Articles on Generalized Additive Models
+
+   - Fasiolo, M., Goude, Y., Nedellec, R. and Wood, S.N., 2017. Fast calibrated additive quantile regression. arXiv preprint arXiv:1707.03307.
+   
+   - Wood, S.N. and Fasiolo, M., 2017. A generalized Fellner‐Schall method for smoothing parameter optimization with application to Tweedie location, scale and shape models. Biometrics, 73(4), pp.1071-1081.
+   
+<br>
+   
+#### Articles on Monte Carlo methods and intractable likelihoods
+
+   - Fasiolo, M., de Melo, F.E. and Maskell, S., 2018. Langevin incremental mixture importance sampling. Statistics and Computing, 28(3), pp.549-561.
+   
+   - Fasiolo, M., Wood, S.N., Hartig, F. and Bravington, M.V., 2018. An extended empirical saddlepoint approximation for intractable likelihoods. Electronic Journal of Statistics, 12(1), pp.1544-1578.
+   
+   - Fasiolo, M. and Wood, S.N., 2018. ABC in ecological modelling. In Handbook of Approximate Bayesian Computation (pp. 597-622). Chapman and Hall/CRC.
+   
+   - Fasiolo, M., Pya, N. and Wood, S.N., 2016. A comparison of inferential methods for highly nonlinear state space models in ecology and epidemiology. Statistical Science, 31(1), pp.96-118.
+
+
+
