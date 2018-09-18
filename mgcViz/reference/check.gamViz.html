@@ -193,13 +193,41 @@ If number of datapoints &gt; <code>maxpo</code>, then a subsample of <code>maxpo
 <span class='no'>b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='getViz.html'>getViz</a></span>(<span class='no'>b</span>)
 
 <span class='co'># Checks using default options</span>
-<span class='fu'>check</span>(<span class='no'>b</span>)</div><div class='output co'>#&gt; <span class='error'>Error: `path` must be a string.</span></div><div class='input'>
+<span class='fu'>check</span>(<span class='no'>b</span>)</div><div class='output co'>#&gt; 
+#&gt; Method: GCV   Optimizer: magic
+#&gt; Smoothing parameter selection converged after 8 iterations.
+#&gt; The RMS GCV score gradient at convergence was 1.072609e-05 .
+#&gt; The Hessian was positive definite.
+#&gt; Model rank =  37 / 37 
+#&gt; 
+#&gt; Basis dimension (k) checking results. Low p-value (k-index&lt;1) may
+#&gt; indicate that k is too low, especially if edf is close to k'.
+#&gt; 
+#&gt;         k'  edf k-index p-value
+#&gt; s(x0) 9.00 2.32    1.00    0.45
+#&gt; s(x1) 9.00 2.31    0.97    0.35
+#&gt; s(x2) 9.00 7.65    0.96    0.24
+#&gt; s(x3) 9.00 1.23    1.04    0.68</div><div class='output co'>#&gt; <span class='message'>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></div><div class='img'><img src='check.gamViz-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Change some algorithmic and graphical parameters</span>
 <span class='fu'>check</span>(<span class='no'>b</span>,
       <span class='kw'>a.qq</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"tnorm"</span>,
                   <span class='kw'>a.cipoly</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"light blue"</span>)),
       <span class='kw'>a.respoi</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>0.2</span>),
-      <span class='kw'>a.hist</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>bins</span> <span class='kw'>=</span> <span class='fl'>10</span>))</div><div class='output co'>#&gt; <span class='error'>Error: `path` must be a string.</span></div></pre>
+      <span class='kw'>a.hist</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>bins</span> <span class='kw'>=</span> <span class='fl'>10</span>))</div><div class='output co'>#&gt; 
+#&gt; Method: GCV   Optimizer: magic
+#&gt; Smoothing parameter selection converged after 8 iterations.
+#&gt; The RMS GCV score gradient at convergence was 1.072609e-05 .
+#&gt; The Hessian was positive definite.
+#&gt; Model rank =  37 / 37 
+#&gt; 
+#&gt; Basis dimension (k) checking results. Low p-value (k-index&lt;1) may
+#&gt; indicate that k is too low, especially if edf is close to k'.
+#&gt; 
+#&gt;         k'  edf k-index p-value
+#&gt; s(x0) 9.00 2.32    1.00    0.45
+#&gt; s(x1) 9.00 2.31    0.97    0.32
+#&gt; s(x2) 9.00 7.65    0.96    0.33
+#&gt; s(x3) 9.00 1.23    1.04    0.72</div><div class='img'><img src='check.gamViz-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

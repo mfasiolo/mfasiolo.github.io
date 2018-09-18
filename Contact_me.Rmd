@@ -10,7 +10,7 @@ knitr::include_graphics("phone.png")
 </center>
 
 <center>
-<a href="V_NOACCO_CV_02_07_2018#" class="download" title="CV">Curriculum Vitae</a>	
+<a href="CV.pdf#" class="download" title="CV">Curriculum Vitae</a>	
 
 <br>
 <br>

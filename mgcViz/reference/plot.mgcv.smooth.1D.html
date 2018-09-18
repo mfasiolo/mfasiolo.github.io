@@ -224,7 +224,7 @@ Generalized Additive Model Components. Scandinavian Journal of Statistics.</p>
 <span class='co'># Fit model</span>
 <span class='no'>b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='mqgamV.html'>mqgamV</a></span>(<span class='no'>y</span> ~ <span class='fu'>s</span>(<span class='no'>x1</span>) + <span class='fu'>s</span>(<span class='no'>x2</span>), <span class='kw'>qu</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.2</span>, <span class='fl'>0.5</span>, <span class='fl'>0.8</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>)</div><div class='output co'>#&gt; Estimating learning rate. Each dot corresponds to a loss evaluation. 
 #&gt; qu = 0.5.........done 
-#&gt; qu = 0.2...............done 
+#&gt; qu = 0.2..........done 
 #&gt; qu = 0.8.........done </div><div class='input'>
 <span class='fu'>plot</span>(<span class='fu'><a href='sm.html'>sm</a></span>(<span class='no'>b</span>, <span class='fl'>1</span>)) + <span class='fu'><a href='l_fitLine.html'>l_fitLine</a></span>(<span class='kw'>linetype</span> <span class='kw'>=</span> <span class='fl'>2</span>) + <span class='fu'><a href='l_rug.html'>l_rug</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='img'><img src='plot.mgcv.smooth.1D-6.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
