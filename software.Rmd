@@ -7,7 +7,7 @@
 
 The following packages are part of the output of my research on GAM models:
 
-   - **mgcViz**: visual tools for Generalized Additive Models. See the github [source code](https://github.com/mfasiolo/mgcViz) and the [online manual](https://mfasiolo.github.io/mgcViz). Available on [CRAN](https://cran.r-project.org/web/packages/mgcViz/index.html).
+   - **mgcViz**: visual tools for Generalized Additive Models. See the github [source code](https://github.com/mfasiolo/mgcViz) and the [online manual](mgcViz/index.html). Available on [CRAN](https://cran.r-project.org/web/packages/mgcViz/index.html).
    
    - **qgam**: quantile additive model in R. See the github [source code](https://github.com/mfasiolo/qgam) and the [online manual](https://mfasiolo.github.io/qgam). Available on [CRAN](https://cran.r-project.org/web/packages/qgam/index.html).
    
