@@ -7,7 +7,7 @@ knitr::include_graphics("phone.png")
 
 <center>
 
-<img src="phone.jpg" alt="drawing" style="width:600px;"/> 
+<img src="phone.jpg" style="width:600px;"/> 
 
 </center>
 
