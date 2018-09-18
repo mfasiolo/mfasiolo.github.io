@@ -7,9 +7,9 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    #- text: "Publications"
-    #  icon: fa-paper-plane 
-    #  href: Project.html
+    - text: "Publications"
+      icon: fa-paper-plane 
+      href: publications.html
     - text: "Sofware"
       icon: fa-cubes 
       href: software.html
