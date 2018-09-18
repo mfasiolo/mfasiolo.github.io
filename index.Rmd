@@ -22,7 +22,7 @@ Beside doing research, I enjoy teaching short courses on GAM modelling (see "Tra
 
 **Publications**
 
-  - Aug18: as [Scott Sisson announced on Twitter](https://twitter.com/ABC_Research/status/1032218764719214592), the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled "Approximate methods for dynamic ecological models", where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. An free [Arxiv version](https://arxiv.org/abs/1511.02644) of the chapter is also available.
+  - Aug18: as [Scott Sisson announced on Twitter](https://twitter.com/ABC_Research/status/1032218764719214592), the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled "Approximate methods for dynamic ecological models", where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. A free [Arxiv version](https://arxiv.org/abs/1511.02644) of the chapter is also available.
   
   - May18: our paper titled "An extended empirical saddlepoint approximation for intractable likelihoods" has been [published](https://projecteuclid.org/euclid.ejs/1527300140) on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.   
 

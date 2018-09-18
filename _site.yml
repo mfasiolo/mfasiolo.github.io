@@ -12,7 +12,7 @@ navbar:
     #  href: Project.html
     - text: "Sofware"
       icon: fa-cubes 
-      href: GSA-SAFE.html
+      href: software.html
     #- text: "Blog"
      # icon: fa-rss
      # href: https://YOURGITHUB.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES
