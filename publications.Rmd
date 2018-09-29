@@ -3,6 +3,8 @@
 
 #### Articles on Generalized Additive Models
 
+   - Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2018. Scalable visualisation methods for modern Generalized Additive Models. arXiv preprint arXiv:1809.10632.
+
    - Fasiolo, M., Goude, Y., Nedellec, R. and Wood, S.N., 2017. Fast calibrated additive quantile regression. arXiv preprint arXiv:1707.03307.
    
    - Wood, S.N. and Fasiolo, M., 2017. A generalized Fellner‐Schall method for smoothing parameter optimization with application to Tweedie location, scale and shape models. Biometrics, 73(4), pp.1071-1081.
@@ -18,6 +20,12 @@
    - Fasiolo, M. and Wood, S.N., 2018. ABC in ecological modelling. In Handbook of Approximate Bayesian Computation (pp. 597-622). Chapman and Hall/CRC.
    
    - Fasiolo, M., Pya, N. and Wood, S.N., 2016. A comparison of inferential methods for highly nonlinear state space models in ecology and epidemiology. Statistical Science, 31(1), pp.96-118.
+   
+<br>
+
+#### Interdisciplinary publications
+
+   - Tomaschek, F., Tucker, B.V., Fasiolo, M. and Baayen, R.H., 2018. Practice makes perfect: The consequences of lexical proficiency for articulation. Linguistics Vanguard, 4(s2).
 
 
 
