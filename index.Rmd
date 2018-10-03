@@ -22,6 +22,8 @@ Beside doing research, I enjoy teaching short courses on GAM modelling, so if yo
 
 **Publications**
 
+  - Sep18: we have arXived a new paper titled "Scalable visualisation methods for modern Generalized Additive Models". It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) R package.
+
   - Aug18: as [Scott Sisson announced on Twitter](https://twitter.com/ABC_Research/status/1032218764719214592), the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled "Approximate methods for dynamic ecological models", where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. A free [Arxiv version](https://arxiv.org/abs/1511.02644) of the chapter is also available.
   
   - May18: our paper titled "An extended empirical saddlepoint approximation for intractable likelihoods" has been [published](https://projecteuclid.org/euclid.ejs/1527300140) on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.   
