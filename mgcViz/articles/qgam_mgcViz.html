@@ -29,7 +29,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -52,7 +52,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -85,7 +88,7 @@
       <h1>Quantile additive models using qgam and mgcViz</h1>
                         <h4 class="author">Matteo Fasiolo and Raphael Nedellec</h4>
             
-            <h4 class="date">October 03 2018</h4>
+            <h4 class="date">December 06 2018</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/mfasiolo/mgcViz/blob/master/vignettes/qgam_mgcViz.Rmd"><code>vignettes/qgam_mgcViz.Rmd</code></a></small>
       <div class="hidden name"><code>qgam_mgcViz.Rmd</code></div>
@@ -94,7 +97,14 @@
 
     
     
-<p>The <code>qgam</code> R package offers methods for fitting additive quantile regression models based on splines, using the methods described in <a href="https://arxiv.org/abs/1707.03307">Fasiolo et al., 2017</a>. It is useful to use <code>qgam</code> together with <code>mgcViz</code>, which extends the basic visualizations provided by <code>mgcv</code>.</p>
+<style>
+body {
+text-align: justify}
+</style>
+<div id="introduction" class="section level1">
+<h1 class="hasAnchor">
+<a href="#introduction" class="anchor"></a>Introduction</h1>
+<p>The <code>qgam</code> R package offers methods for fitting additive quantile regression models based on splines, using the methods described in <a href="https://arxiv.org/abs/1707.03307">Fasiolo et al., 2017</a>. It is useful to use <code>qgam</code> together with <code>mgcViz</code> <a href="https://arxiv.org/abs/1809.10632">Fasiolo et al., 2018</a>, which extends the basic visualizations provided by <code>mgcv</code>.</p>
 <p>The main fitting functions are:</p>
 <ul>
 <li>
@@ -104,6 +114,7 @@
 <li>
 <code><a href="../reference/qgamV.html">qgamV()</a></code> and <code><a href="../reference/mqgamV.html">mqgamV()</a></code> are two convenient wrappers that fit quantile GAMs and return <code>gamViz</code> objects, for which <code>mgcViz</code> provides lots of visualizations.</li>
 </ul>
+</div>
 <div id="an-additive-example-with-four-covariates" class="section level1">
 <h1 class="hasAnchor">
 <a href="#an-additive-example-with-four-covariates" class="anchor"></a>An additive example with four covariates</h1>
@@ -135,7 +146,7 @@ dat &lt;-<span class="st"> </span><span class="kw">gamSim</span>(<span class="dv
 <pre><code>## [1] 693.1062</code></pre>
 <p>We can plot all the smooth effects by doing:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">plot</span>(fit2), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
-<p><img src="qgam_mgcViz_files/figure-html/fourD5-1.png" width="700" style="display:block; margin: auto"> To print only the second we do</p>
+<p><img src="qgam_mgcViz_files/figure-html/fourD5-1.png" width="576" style="display:block; margin: auto"> To print only the second we do</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">plot</span>(fit2, <span class="dt">select =</span> <span class="dv">2</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD6-1.png" width="700" style="display:block; margin: auto"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">plot</span>(fit2, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
@@ -195,13 +206,13 @@ fit &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.h
 <span class="st">                    </span><span class="kw">s</span>(Frequency) +<span class="st"> </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) +<span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),
             <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
-## qu = 0.5................done</code></pre>
+## qu = 0.5..............done</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"Subject"</span>) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex3-1.png" width="700" style="display:block; margin: auto"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"Word"</span>) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex3-2.png" width="700" style="display:block; margin: auto"></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">AIC</span>(fit) -<span class="st"> </span><span class="kw">AIC</span>(fit2)</code></pre></div>
-<pre><code>## [1] 832.0684</code></pre>
+<pre><code>## [1] 832.0145</code></pre>
 <p>We achieve lower AIC and the residuals checks look better (especially the one for <code>Subject</code>).</p>
 <p>A potentially interesting question is then: is the effect of <code>Trial</code> different for native and non-native speakers? We can verify this by using a by-factor smooth:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 ~<span class="st">  </span><span class="kw">s</span>(Trial, <span class="dt">by =</span> NativeLanguage) +<span class="st"> </span><span class="co"># &lt;- by-factor smooth</span>
@@ -209,7 +220,7 @@ fit &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.h
 <span class="st">                    </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) +<span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),
              <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
-## qu = 0.5..........done</code></pre>
+## qu = 0.5...........done</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">plot</span>(fit3), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex4-1.png" width="700" style="display:block; margin: auto"> Can look directly at the difference between the by-factor smooths by doing:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html">sm</a></span>(fit3, <span class="dv">1</span>)
@@ -221,10 +232,10 @@ s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html"
 <span class="st">                </span>+<span class="st"> </span><span class="kw">s</span>(Frequency) +<span class="st"> </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) +<span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),
                 <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="kw">seq</span>(<span class="fl">0.2</span>, <span class="fl">0.8</span>, <span class="dt">length.out =</span> <span class="dv">5</span>))</code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
-## qu = 0.5..........done 
-## qu = 0.35.................done 
-## qu = 0.65...........done 
-## qu = 0.2...................done 
+## qu = 0.5...........done 
+## qu = 0.35.......done 
+## qu = 0.65..........done 
+## qu = 0.2....................done 
 ## qu = 0.8...........done</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">plot</span>(fit5, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">2</span>, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex6-1.png" width="700" style="display:block; margin: auto"><img src="qgam_mgcViz_files/figure-html/lex6-2.png" width="700" style="display:block; margin: auto"> The effects are fairly stable across quantiles, the effect of <code>Frequency</code> might be stronger for high quantiles. We can examine the fitted quantile models individually:</p>
@@ -247,12 +258,12 @@ s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html"
 ## 
 ## Approximate significance of smooth terms:
 ##                                   edf Ref.df  Chi.sq  p-value    
-## s(Trial):NativeLanguageEnglish  2.208  2.733   8.547   0.0247 *  
-## s(Trial):NativeLanguageOther    1.195  1.355   0.487   0.5102    
+## s(Trial):NativeLanguageEnglish  2.209  2.733   8.549   0.0247 *  
+## s(Trial):NativeLanguageOther    1.195  1.355   0.487   0.5100    
 ## s(Length)                       1.003  1.004   0.760   0.3842    
 ## s(Frequency)                    2.789  3.062  36.604 7.26e-08 ***
-## s(Subject)                     18.483 19.000 886.988  &lt; 2e-16 ***
-## s(Word)                        43.904 76.000 207.494 3.22e-05 ***
+## s(Subject)                     18.483 19.000 887.362  &lt; 2e-16 ***
+## s(Word)                        43.912 76.000 207.645 3.20e-05 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -263,8 +274,8 @@ s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html"
 <h1 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h1>
 <ul>
-<li>Fasiolo, M., Goude, Y., Nedellec, R. and Wood, S. N. (2017). Fast calibrated additive quantile regression. Available at <a href="https://arxiv.org/abs/1707.03307" class="uri">https://arxiv.org/abs/1707.03307</a>
-</li>
+<li><p>Fasiolo, M., Goude, Y., Nedellec, R. and Wood, S. N. (2017). Fast calibrated additive quantile regression. Available at <a href="https://arxiv.org/abs/1707.03307" class="uri">https://arxiv.org/abs/1707.03307</a></p></li>
+<li><p>Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N. (2018). Scalable visualisation methods for modern Generalized Additive Models. arXiv preprint arXiv:1809.10632.</p></li>
 </ul>
 </div>
   </div>
@@ -274,7 +285,8 @@ s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html"
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#an-additive-example-with-four-covariates">An additive example with four covariates</a></li>
+<li><a href="#introduction">Introduction</a></li>
+      <li><a href="#an-additive-example-with-four-covariates">An additive example with four covariates</a></li>
       <li><a href="#random-effect-modelling-lexical-decision-task">Random effect modelling: lexical decision task</a></li>
       <li><a href="#references">References</a></li>
       </ul>

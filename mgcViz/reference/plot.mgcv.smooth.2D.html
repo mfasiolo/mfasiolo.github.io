@@ -58,7 +58,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -81,7 +81,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -192,7 +195,7 @@ Otherwise the bands treat the smoothing parameters as fixed.</p></td>
     </tr>
     <tr>
       <th>a.facet</th>
-      <td><p>arguments to be passed to <a href='http://www.rdocumentation.org/packages/ggplot2/topics/facet_wrap'>ggplot2::facet_wrap</a> or <a href='http://www.rdocumentation.org/packages/ggplot2/topics/facet_grid'>ggplot2::facet_grid</a>. The former gets
+      <td><p>arguments to be passed to <a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>ggplot2::facet_wrap</a> or <a href='https://ggplot2.tidyverse.org/reference/facet_grid.html'>ggplot2::facet_grid</a>. The former gets
 called when <code>fix</code> contains one vector, the latter when <code>fix</code> contains two vectors.</p></td>
     </tr>
     </table>
@@ -218,7 +221,7 @@ Generalized Additive Model Components. Scandinavian Journal of Statistics.</p>
 <span class='fu'>plot</span>(<span class='fu'><a href='sm.html'>sm</a></span>(<span class='no'>b</span>, <span class='fl'>2</span>)) + <span class='fu'><a href='l_fitRaster.html'>l_fitRaster</a></span>(<span class='kw'>pTrans</span> <span class='kw'>=</span> <span class='fu'><a href='zto1.html'>zto1</a></span>(<span class='fl'>0.05</span>, <span class='fl'>2</span>, <span class='fl'>0.1</span>), <span class='kw'>noiseup</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>) +
   <span class='fu'><a href='l_rug.html'>l_rug</a></span>() + <span class='fu'><a href='l_fitContour.html'>l_fitContour</a></span>()</div><div class='img'><img src='plot.mgcv.smooth.2D-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Plot contour of effect joint density of design points</span>
-<span class='fu'>plot</span>(<span class='fu'><a href='sm.html'>sm</a></span>(<span class='no'>b</span>, <span class='fl'>2</span>)) + <span class='fu'><a href='l_dens.html'>l_dens</a></span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"joint"</span>) + <span class='fu'><a href='l_points.html'>l_points</a></span>() + <span class='fu'><a href='l_fitContour.html'>l_fitContour</a></span>() +
+<span class='fu'>plot</span>(<span class='fu'><a href='sm.html'>sm</a></span>(<span class='no'>b</span>, <span class='fl'>2</span>)) + <span class='fu'>l_dens</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"joint"</span>) + <span class='fu'><a href='l_points.html'>l_points</a></span>() + <span class='fu'><a href='l_fitContour.html'>l_fitContour</a></span>() +
   <span class='fu'>coord_cartesian</span>(<span class='kw'>expand</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) <span class='co'># Fill the plot</span></div><div class='img'><img src='plot.mgcv.smooth.2D-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>###</span>
 <span class='co'># Quantile GAM example</span>

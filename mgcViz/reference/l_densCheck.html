@@ -60,7 +60,7 @@ along a covariate, x." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -83,7 +83,10 @@ along a covariate, x." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -155,13 +158,13 @@ the whole x-y plane, no matter how low it is.</p></td>
       <td><p>function used to compute the difference between the empirical (em) and theoretical (th)
 conditional density of the residuals. By default it is <code>(sqrt(em)-sqrt(th))^(1/3)</code>,
 where <code>th</code> is computed using either a uniform or a normal density, depending on the
-type of residuals used in the <a href='check1D.html'>check1D</a> call. It should as arguments three vectors: <code>.ed</code> (the empirical
-conditional density), <code>.gr</code> (the points along y where the density is evaluated) and
-<code>.y</code> (the partial residuals).</p></td>
+type of residuals used in the <a href='check1D.html'>check1D</a> call. It should have as arguments three vectors: <code>.ed</code> (the empirical
+conditional density), <code>.gr</code> (the points along the y-axis where the density is evaluated) and
+<code>.y</code> (the residuals).</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>graphical arguments to be passed to <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_tile'>ggplot2::geom_raster</a></code>.</p></td>
+      <td><p>graphical arguments to be passed to <code><a href='https://ggplot2.tidyverse.org/reference/geom_tile.html'>ggplot2::geom_raster</a></code>.</p></td>
     </tr>
     </table>
     
@@ -171,14 +174,25 @@ conditional density), <code>.gr</code> (the points along y where the density is 
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This layer is mainly meant to work together with the <a href='check1D.html'>check1D</a> function. The default <code>dFun</code>
-if compare the conditional distribution of the residuals with N(0, 1) or Unif(0, 1) densities,
-depending on the residual type used in the <a href='check1D.html'>check1D</a> call.</p>
+    <p>This layer is mainly meant to work together with the <a href='check1D.html'>check1D</a> function. If check1D() is called with
+residual type == "tunif" or "tnormal", then <code>l_densCheck</code> compares the conditional distribution
+of the residuals with Unif(0, 1) or N(0, 1). By changing the distance function <code>dFun</code>
+one could of course change both the distance metric and the reference distribution (see Examples below). <br /> <br />
+WARNING: if check1D() is called with type != "tunif" or "tnormal", then the default distance used by l_densCheck is <br />
+<code>dFun &lt;- function(.ed, .gr, .y)</code> <code>{</code><br />
+<code>d &lt;- dnorm(.gr, 0, sd=sd(.y)) # sd=sd(.y) !!!</code><br />
+<code>d &lt;- sqrt(.ed)-sqrt(d) </code><br />
+<code>return(sign(d)*abs(d)^(1/3))</code><br />
+<code>}</code> <br />
+so the residuals are standardized using their own std dev <code>sd(.y)</code>.
+Hence <code>l_densCheck</code> might not detect that the mean estimated variance
+under the fitted model is different from the residuals variance.
+Hence it is safer to use residual types "tunif" or "tnormal", or a
+customized distance function dFun (see below for an example on how to do this).</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>mgcViz</span>);
-
 <span class='co'># Dataset where variance increases linearly with x2, for x2 &gt; 0.2</span>
 <span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fl'>1e3</span>
 <span class='no'>x1</span> <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='fl'>1e3</span>)
@@ -193,7 +207,18 @@ depending on the residual type used in the <a href='check1D.html'>check1D</a> ca
 <span class='co'># the model (residuals should be N(0, sigma) here).</span>
 <span class='co'># Here there are clear signs of heteroscedasticity: </span>
 <span class='co'># the conditional variance is is increasing for x2 &gt; 0.2. </span>
-<span class='fu'><a href='check1D.html'>check1D</a></span>(<span class='no'>b</span>, <span class='st'>"x2"</span>) + <span class='fu'>l_densCheck</span>() + <span class='fu'><a href='l_rug.html'>l_rug</a></span>()</div><div class='img'><img src='l_densCheck-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='check1D.html'>check1D</a></span>(<span class='no'>b</span>, <span class='st'>"x2"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"tnormal"</span>) + <span class='fu'>l_densCheck</span>() + <span class='fu'><a href='l_rug.html'>l_rug</a></span>()</div><div class='img'><img src='l_densCheck-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># Suppose we want to compare the conditional density of the standardized residuals</span>
+<span class='co'># not with a Gaussian, but with a Student-t density with 3 degree of freedom.</span>
+<span class='co'># We could achieve this as follows:</span>
+<span class='no'>myDistance</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>.ed</span>, <span class='no'>.gr</span>, <span class='no'>.y</span>){
+  <span class='no'>d</span> <span class='kw'>&lt;-</span> <span class='fu'>dt</span>(<span class='no'>.gr</span> / <span class='fu'>sd</span>(<span class='no'>.y</span>), <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>3</span>)
+  <span class='no'>d</span> <span class='kw'>&lt;-</span> <span class='fu'>abs</span>( <span class='fu'>sqrt</span>(<span class='no'>.ed</span>) - <span class='fu'>sqrt</span>(<span class='no'>d</span>) ) <span class='co'># We are using absolute difference between sqrt-densities </span>
+}
+
+<span class='fu'><a href='check1D.html'>check1D</a></span>(<span class='no'>b</span>, <span class='st'>"x2"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"response"</span>) + <span class='fu'>l_densCheck</span>(<span class='kw'>dFun</span> <span class='kw'>=</span> <span class='no'>myDistance</span>) + <span class='fu'><a href='l_rug.html'>l_rug</a></span>()</div><div class='img'><img src='l_densCheck-2.png' alt='' width='700' height='433' /></div><div class='input'># NB comparing with a Student density is not useful for this example, but it illustrates
+# how both the distance function and the reference density can be customized.
+
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

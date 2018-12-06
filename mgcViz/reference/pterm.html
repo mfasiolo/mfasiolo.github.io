@@ -59,7 +59,7 @@ class gamViz." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -82,7 +82,10 @@ class gamViz." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -172,7 +175,7 @@ will return an object of class "ptermNumeric".</p>
 <span class='fu'>plot</span>(<span class='no'>pt</span>) + <span class='fu'><a href='l_fitBar.html'>l_fitBar</a></span>(<span class='kw'>a.aes</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='fu'>I</span>(<span class='st'>"light blue"</span>))) + <span class='fu'><a href='l_ciBar.html'>l_ciBar</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='img'><img src='pterm-4.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Plot effect of 'x3:fac': no method available yet available for second order terms</span>
 <span class='no'>pt</span> <span class='kw'>&lt;-</span> <span class='fu'>pterm</span>(<span class='no'>o</span>, <span class='fl'>7</span>)
-<span class='fu'>plot</span>(<span class='no'>pt</span>)</div><div class='output co'>#&gt; <span class='message'>mgcViz does not know how to plot this effect. Returning NULL.</span></div><div class='input'>
+<span class='fu'>plot</span>(<span class='no'>pt</span>)</div><div class='output co'>#&gt; <span class='message'>mgcViz does not know how to plot interactions. Returning NULL.</span></div><div class='input'>
 <span class='co'>####### 1. Continued: Quantile GAMs</span>
 <span class='no'>b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='mqgamV.html'>mqgamV</a></span>(<span class='no'>y</span> ~ <span class='no'>x0</span> + <span class='no'>x1</span> + <span class='fu'>I</span>(<span class='no'>x1</span>^<span class='fl'>2</span>) + <span class='fu'>s</span>(<span class='no'>x2</span>,<span class='kw'>bs</span><span class='kw'>=</span><span class='no'>bs</span>,<span class='kw'>k</span><span class='kw'>=</span><span class='no'>k</span>) + <span class='no'>x3</span>:<span class='no'>fac</span> +
               <span class='fu'>I</span>(<span class='no'>x1</span>*<span class='no'>x2</span>) + <span class='no'>logi</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>qu</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0.3</span>, <span class='fl'>0.5</span>, <span class='fl'>0.8</span>))</div><div class='output co'>#&gt; Estimating learning rate. Each dot corresponds to a loss evaluation. 
@@ -182,7 +185,7 @@ will return an object of class "ptermNumeric".</p>
 <span class='fu'>plot</span>(<span class='fu'>pterm</span>(<span class='no'>b</span>, <span class='fl'>3</span>)) + <span class='fu'><a href='l_ciBar.html'>l_ciBar</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='fl'>2</span>) + <span class='fu'><a href='l_fitPoints.html'>l_fitPoints</a></span>()</div><div class='img'><img src='pterm-5.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='fu'>plot</span>(<span class='fu'>pterm</span>(<span class='no'>b</span>, <span class='fl'>4</span>)) + <span class='fu'><a href='l_fitBar.html'>l_fitBar</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"blue"</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='fl'>3</span>) + <span class='fu'><a href='l_ciBar.html'>l_ciBar</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='img'><img src='pterm-6.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Don't know how to plot this interaction</span>
-<span class='fu'>plot</span>(<span class='fu'>pterm</span>(<span class='no'>b</span>, <span class='fl'>6</span>))</div><div class='output co'>#&gt; <span class='message'>mgcViz does not know how to plot this effect. Returning NULL.</span></div><div class='input'>
+<span class='fu'>plot</span>(<span class='fu'>pterm</span>(<span class='no'>b</span>, <span class='fl'>6</span>))</div><div class='output co'>#&gt; <span class='message'>mgcViz does not know how to plot interactions. Returning NULL.</span></div><div class='input'>
 <span class='co'>####### 2. Gaussian GAMLSS model</span>
 <span class='fu'>library</span>(<span class='no'>MASS</span>)
 <span class='no'>mcycle</span>$<span class='no'>fac</span> <span class='kw'>&lt;-</span> <span class='fu'>as.factor</span>( <span class='fu'>sample</span>(<span class='fu'>c</span>(<span class='st'>"z"</span>, <span class='st'>"k"</span>, <span class='st'>"a"</span>, <span class='st'>"f"</span>), <span class='fu'>nrow</span>(<span class='no'>mcycle</span>), <span class='kw'>replace</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>) )

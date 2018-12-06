@@ -59,7 +59,7 @@ in a computationally efficient manner." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -82,7 +82,10 @@ in a computationally efficient manner." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -128,7 +131,7 @@ in a computationally efficient manner.</p>
     <pre class="usage"><span class='co'># S3 method for qqGam</span>
 <span class='fu'><a href='zoom.html'>zoom</a></span>(<span class='no'>o</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ylim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>ngr</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>adGrid</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>CI</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>worm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>show.reps</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>a.qqpoi</span> <span class='kw'>=</span> <span class='fu'>list</span>(), <span class='kw'>a.ablin</span> <span class='kw'>=</span> <span class='fu'>list</span>(),
+  <span class='kw'>showReps</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>a.qqpoi</span> <span class='kw'>=</span> <span class='fu'>list</span>(), <span class='kw'>a.ablin</span> <span class='kw'>=</span> <span class='fu'>list</span>(),
   <span class='kw'>a.cipoly</span> <span class='kw'>=</span> <span class='fu'>list</span>(), <span class='kw'>a.replin</span> <span class='kw'>=</span> <span class='fu'>list</span>(), <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -172,24 +175,24 @@ the QQ-points used in the original <code>qq.gamViz</code> call (but only those f
       <td><p>if <code>TRUE</code> a worm-plot (a de-trended QQ-plot) is plotted, rather than a QQ-plot.</p></td>
     </tr>
     <tr>
-      <th>show.reps</th>
+      <th>showReps</th>
       <td><p>if <code>TRUE</code> all the QQ-lines corresponding to the simulated (model-based) QQ-plots.</p></td>
     </tr>
     <tr>
       <th>a.qqpoi</th>
-      <td><p>list of arguments to be passed to <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_point'>ggplot2::geom_point</a></code>, which plots the main QQ-plot.</p></td>
+      <td><p>list of arguments to be passed to <code><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>ggplot2::geom_point</a></code>, which plots the main QQ-plot.</p></td>
     </tr>
     <tr>
       <th>a.ablin</th>
-      <td><p>list of arguments to be passed to <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_abline'>ggplot2::geom_abline</a></code>, which adds the reference line.</p></td>
+      <td><p>list of arguments to be passed to <code><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>ggplot2::geom_abline</a></code>, which adds the reference line.</p></td>
     </tr>
     <tr>
       <th>a.cipoly</th>
-      <td><p>list of arguments to be passed to <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_polygon'>ggplot2::geom_polygon</a></code>, which add the confidence intervals.</p></td>
+      <td><p>list of arguments to be passed to <code><a href='https://ggplot2.tidyverse.org/reference/geom_polygon.html'>ggplot2::geom_polygon</a></code>, which add the confidence intervals.</p></td>
     </tr>
     <tr>
       <th>a.replin</th>
-      <td><p>list of arguments to be passed to <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_path'>ggplot2::geom_line</a></code>, which adds a line for each simulated
+      <td><p>list of arguments to be passed to <code><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>ggplot2::geom_line</a></code>, which adds a line for each simulated
 QQ-plot.</p></td>
     </tr>
     <tr>
@@ -216,7 +219,7 @@ QQ-plot.</p></td>
 <span class='no'>o</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='qq.html'>qq</a></span>(<span class='no'>lr.fit</span>, <span class='kw'>rep</span> <span class='kw'>=</span> <span class='fl'>50</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"simul1"</span>, <span class='kw'>CI</span> <span class='kw'>=</span> <span class='st'>"normal"</span>)
 <span class='no'>o</span> <span class='co'># This is the whole qqplot</span></div><div class='img'><img src='zoom.qqGam-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># We can zoom in along x at little extra costs (most computation already done by qq.gamViz)</span>
-<span class='fu'><a href='zoom.html'>zoom</a></span>(<span class='no'>o</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0</span>, <span class='fl'>1</span>), <span class='kw'>show.reps</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+<span class='fu'><a href='zoom.html'>zoom</a></span>(<span class='no'>o</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>0</span>, <span class='fl'>1</span>), <span class='kw'>showReps</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
      <span class='kw'>a.replin</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.1</span>), <span class='kw'>a.qqpoi</span> <span class='kw'>=</span>  <span class='fu'>list</span>(<span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>19</span>))</div><div class='img'><img src='zoom.qqGam-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

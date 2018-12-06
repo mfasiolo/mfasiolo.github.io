@@ -63,7 +63,7 @@ first and third quartiles. qqplot produces a QQ plot of two datasets." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -86,7 +86,10 @@ first and third quartiles. qqplot produces a QQ plot of two datasets." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -197,7 +200,7 @@ Corresponding quantile pairs define the line drawn.</p></td>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'>rt</span>(<span class='fl'>200</span>, <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>5</span>)
 <span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'>rt</span>(<span class='fl'>300</span>, <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>5</span>)
 <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/stats/topics/qqnorm'>qqplot</a></span>(<span class='no'>x</span>, <span class='no'>y</span>)</div><div class='img'><img src='qqplots-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>qqplot</span>(<span class='no'>x</span>, <span class='no'>y</span>)</div><div class='img'><img src='qqplots-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># add a qqline()</span>
-<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/last_plot'>last_plot</a></span>() + <span class='fu'>qqline</span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='fu'>rt</span>(<span class='fl'>500</span>, <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>4.8</span>), <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"green"</span>)</div><div class='img'><img src='qqplots-5.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/last_plot.html'>last_plot</a></span>() + <span class='fu'>qqline</span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='fu'>rt</span>(<span class='fl'>500</span>, <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>4.8</span>), <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"green"</span>)</div><div class='img'><img src='qqplots-5.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## "QQ-Chisquare" : --------------------------</span>
 <span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'>rchisq</span>(<span class='fl'>500</span>, <span class='kw'>df</span> <span class='kw'>=</span> <span class='fl'>3</span>)
 <span class='co'>## Q-Q plot for Chi^2 data against true theoretical distribution:</span>

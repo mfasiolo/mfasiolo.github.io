@@ -58,7 +58,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -81,7 +81,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -125,7 +128,8 @@
 
     <pre class="usage"><span class='co'># S3 method for mgcv.smooth.1D</span>
 <span class='fu'>plot</span>(<span class='no'>x</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>maxpo</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
-  <span class='kw'>trans</span> <span class='kw'>=</span> <span class='no'>identity</span>, <span class='kw'>unconditional</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>seWithMean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+  <span class='kw'>trans</span> <span class='kw'>=</span> <span class='no'>identity</span>, <span class='kw'>unconditional</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>seWithMean</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>nsim</span> <span class='kw'>=</span> <span class='fl'>0</span>,
+  <span class='no'>...</span>)
 
 <span class='co'># S3 method for multi.mgcv.smooth.1D</span>
 <span class='fu'>plot</span>(<span class='no'>x</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -175,6 +179,11 @@ that TRUE results in better coverage performance, and this is also suggested
 by simulation.</p></td>
     </tr>
     <tr>
+      <th>nsim</th>
+      <td><p>number of smooth effect curves to be simulated from the posterior distribution.
+These can be plotted using the <a href='l_simLine.html'>l_simLine</a> layer. See Examples section below.</p></td>
+    </tr>
+    <tr>
       <th>...</th>
       <td><p>currently unused.</p></td>
     </tr>
@@ -197,14 +206,13 @@ Generalized Additive Model Components. Scandinavian Journal of Statistics.</p>
 <span class='no'>x2</span> <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='no'>n</span>)
 <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>data.frame</span>(<span class='st'>"x1"</span> <span class='kw'>=</span> <span class='no'>x1</span>, <span class='st'>"x2"</span> <span class='kw'>=</span> <span class='no'>x2</span>,
                   <span class='st'>"y"</span> <span class='kw'>=</span> <span class='fu'>sin</span>(<span class='no'>x1</span>) + <span class='fl'>0.5</span> * <span class='no'>x2</span>^<span class='fl'>2</span> + <span class='fu'>pmax</span>(<span class='no'>x2</span>, <span class='fl'>0.2</span>) * <span class='fu'>rnorm</span>(<span class='no'>n</span>))
-<span class='no'>b</span> <span class='kw'>&lt;-</span> <span class='fu'>bam</span>(<span class='no'>y</span> ~ <span class='fu'>s</span>(<span class='no'>x1</span>)+<span class='fu'>s</span>(<span class='no'>x2</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"fREML"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='no'>b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='getViz.html'>getViz</a></span>(<span class='no'>b</span>)
+<span class='no'>b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='gamV.html'>bamV</a></span>(<span class='no'>y</span> ~ <span class='fu'>s</span>(<span class='no'>x1</span>)+<span class='fu'>s</span>(<span class='no'>x2</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"fREML"</span>, <span class='kw'>aGam</span> <span class='kw'>=</span> <span class='fu'>list</span>(<span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
 
-<span class='no'>o</span> <span class='kw'>&lt;-</span> <span class='fu'>plot</span>( <span class='fu'><a href='sm.html'>sm</a></span>(<span class='no'>b</span>, <span class='fl'>1</span>) )
+<span class='no'>o</span> <span class='kw'>&lt;-</span> <span class='fu'>plot</span>(<span class='fu'><a href='sm.html'>sm</a></span>(<span class='no'>b</span>, <span class='fl'>1</span>), <span class='kw'>nsim</span> <span class='kw'>=</span> <span class='fl'>50</span>) <span class='co'># 50 posterior simulations </span>
 
-<span class='co'># Plot with fitted effect + rug on both axis</span>
-( <span class='no'>o</span> <span class='kw'>&lt;-</span> <span class='no'>o</span> + <span class='fu'><a href='l_fitLine.html'>l_fitLine</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"red"</span>) +
-    <span class='fu'><a href='l_rug.html'>l_rug</a></span>(<span class='kw'>mapping</span> <span class='kw'>=</span> <span class='fu'>aes</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='no'>x</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='no'>y</span>), <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.8</span>) )</div><div class='img'><img src='plot.mgcv.smooth.1D-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># Plot with fitted effect + posterior simulations + rug on x axis</span>
+( <span class='no'>o</span> <span class='kw'>&lt;-</span> <span class='no'>o</span> + <span class='fu'><a href='l_simLine.html'>l_simLine</a></span>() + <span class='fu'><a href='l_fitLine.html'>l_fitLine</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"red"</span>) +
+       <span class='fu'><a href='l_rug.html'>l_rug</a></span>(<span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.8</span>) )</div><div class='img'><img src='plot.mgcv.smooth.1D-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Add CI lines at 1*sigma and 5*sigma</span>
 ( <span class='no'>o</span> <span class='kw'>&lt;-</span> <span class='no'>o</span> + <span class='fu'><a href='l_ciLine.html'>l_ciLine</a></span>(<span class='kw'>mul</span> <span class='kw'>=</span> <span class='fl'>1</span>) + <span class='fu'><a href='l_ciLine.html'>l_ciLine</a></span>(<span class='kw'>mul</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"blue"</span>, <span class='kw'>linetype</span> <span class='kw'>=</span> <span class='fl'>2</span>) )</div><div class='img'><img src='plot.mgcv.smooth.1D-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Add partial residuals and change theme</span>
@@ -216,7 +224,7 @@ Generalized Additive Model Components. Scandinavian Journal of Statistics.</p>
 <span class='no'>o2</span> + <span class='fu'><a href='l_ciPoly.html'>l_ciPoly</a></span>(<span class='kw'>mul</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"light blue"</span>) +
   <span class='fu'><a href='l_fitLine.html'>l_fitLine</a></span>(<span class='kw'>linetype</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"red"</span>)</div><div class='img'><img src='plot.mgcv.smooth.1D-4.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Plot is with conditional density of partial residuals</span>
-<span class='no'>o2</span> + <span class='fu'><a href='l_dens.html'>l_dens</a></span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"cond"</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.9</span>)  +
+<span class='no'>o2</span> + <span class='fu'>l_dens</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"cond"</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.9</span>)  +
   <span class='fu'><a href='l_fitLine.html'>l_fitLine</a></span>(<span class='kw'>linetype</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"red"</span>)</div><div class='img'><img src='plot.mgcv.smooth.1D-5.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>########</span>
 <span class='co'># Quantile GAM example</span>

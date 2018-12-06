@@ -55,7 +55,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -78,7 +78,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -135,9 +138,15 @@
       </tr><tr>
         <!--  -->
         <td>
+          <p><code><a href="check0D.html">check0D()</a></code> </p>
+        </td>
+        <td><p>Checking GAM simulated residuals or responses</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
           <p><code><a href="check1D.html">check1D()</a></code> </p>
         </td>
-        <td><p>Checking GAM residuals along one covariate</p></td>
+        <td><p>Checking GAM residuals or responses along one covariate</p></td>
       </tr><tr>
         <!--  -->
         <td>
@@ -213,7 +222,13 @@
       </tr><tr>
         <!--  -->
         <td>
-          <p><code><a href="l_dens.html">l_dens()</a></code> </p>
+          <p><code><a href="l_dens1D.html">l_dens1D()</a></code> </p>
+        </td>
+        <td><p>Adding density estimate to a plot</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="l_dens2D.html">l_dens2D()</a></code> <code><a href="l_dens2D.html">l_dens()</a></code> </p>
         </td>
         <td><p>Adding density estimate heatmap</p></td>
       </tr><tr>
@@ -234,6 +249,12 @@
           <p><code><a href="l_fitContour.html">l_fitContour()</a></code> </p>
         </td>
         <td><p>Adding fitted effect contour lines</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="l_fitDens.html">l_fitDens()</a></code> </p>
+        </td>
+        <td><p>Adding density strip of fitted effect</p></td>
       </tr><tr>
         <!--  -->
         <td>
@@ -285,6 +306,12 @@
       </tr><tr>
         <!--  -->
         <td>
+          <p><code><a href="l_hist.html">l_hist()</a></code> </p>
+        </td>
+        <td><p>Adding histogram to a plot</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
           <p><code><a href="l_points.html">l_points()</a></code> </p>
         </td>
         <td><p>Add points to plot</p></td>
@@ -312,6 +339,18 @@
           <p><code><a href="l_rug.html">l_rug()</a></code> </p>
         </td>
         <td><p>Adding rug to margins of a plot</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="l_simLine.html">l_simLine()</a></code> </p>
+        </td>
+        <td><p>Add simulated smooth effect curves</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="l_vline.html">l_vline()</a></code> </p>
+        </td>
+        <td><p>Adding vertical line to a plot</p></td>
       </tr><tr>
         <!--  -->
         <td>
@@ -372,6 +411,12 @@
           <p><code><a href="plot.ptermFactor.html">plot(<i>&lt;multi.ptermFactor&gt;</i>)</a></code> <code><a href="plot.ptermFactor.html">plot(<i>&lt;multi.ptermLogical&gt;</i>)</a></code> <code><a href="plot.ptermFactor.html">plot(<i>&lt;ptermFactor&gt;</i>)</a></code> <code><a href="plot.ptermFactor.html">plot(<i>&lt;ptermLogical&gt;</i>)</a></code> </p>
         </td>
         <td><p>Plotting factor or logical parametric effects</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="plot.ptermInteraction.html">plot(<i>&lt;ptermInteraction&gt;</i>)</a></code> <code><a href="plot.ptermInteraction.html">plot(<i>&lt;multi.ptermInteraction&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Plotting parametric interactions</p></td>
       </tr><tr>
         <!--  -->
         <td>
@@ -438,6 +483,12 @@
           <p><code><a href="plotSlice.html">plotSlice()</a></code> </p>
         </td>
         <td><p>Plotting sequence of slices of 2D smooth effect</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="postSim.html">postSim()</a></code> </p>
+        </td>
+        <td><p>Posterior simulation from a GAM object</p></td>
       </tr><tr>
         <!--  -->
         <td>

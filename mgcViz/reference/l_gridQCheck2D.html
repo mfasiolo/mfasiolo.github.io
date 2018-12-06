@@ -61,7 +61,7 @@ we fit the median). Mainly useful in conjuction with check2D." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -84,7 +84,10 @@ we fit the median). Mainly useful in conjuction with check2D." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/mgcviz.html">mgcViz: visual tools for GAMs</a>
+      <a href="../articles/BayesPost.html">Bayesian posterior simulations and predictive checks</a>
+    </li>
+    <li>
+      <a href="../articles/mgcviz.html">An introduction to mgcViz: visual tools for GAMs</a>
     </li>
     <li>
       <a href="../articles/miscellanea.html">Miscellanea: things you can do in mgcViz</a>
@@ -129,7 +132,8 @@ we fit the median). Mainly useful in conjuction with <a href='check2D.html'>chec
     
     </div>
 
-    <pre class="usage"><span class='fu'>l_gridQCheck2D</span>(<span class='no'>qu</span>, <span class='kw'>bw</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>NA</span>, <span class='fl'>NA</span>), <span class='kw'>stand</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>binFun</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>l_gridQCheck2D</span>(<span class='kw'>qu</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>bw</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>NA</span>, <span class='fl'>NA</span>), <span class='kw'>stand</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>binFun</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -141,7 +145,7 @@ we fit the median). Mainly useful in conjuction with <a href='check2D.html'>chec
     <tr>
       <th>bw</th>
       <td><p>numeric vector giving bin width in the vertical and horizontal directions. See the <code>binwidth</code>
-arguments in <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/stat_summary_2d'>?ggplot2::stat_summary_hex</a></code>. If left to <code>NA</code>, it will be set to 1/20
+arguments in <code><a href='https://ggplot2.tidyverse.org/reference/stat_summary_2d.html'>?ggplot2::stat_summary_hex</a></code>. If left to <code>NA</code>, it will be set to 1/20
 of the ranges of x1 and x2.</p></td>
     </tr>
     <tr>
@@ -154,12 +158,12 @@ simply <code>p_hat</code>.</p></td>
     <tr>
       <th>binFun</th>
       <td><p>the <code>ggplot2</code> function used to perform the binning. By default it
-is either <a href='http://www.rdocumentation.org/packages/ggplot2/topics/stat_summary_2d'>ggplot2::stat_summary_2d</a> or <a href='http://www.rdocumentation.org/packages/ggplot2/topics/stat_summary_2d'>ggplot2::stat_summary_hex</a>, depending
+is either <a href='https://ggplot2.tidyverse.org/reference/stat_summary_2d.html'>ggplot2::stat_summary_2d</a> or <a href='https://ggplot2.tidyverse.org/reference/stat_summary_2d.html'>ggplot2::stat_summary_hex</a>, depending
 on the class of the covariates x1 and x2.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>graphical arguments to be passed to <code><a href='http://www.rdocumentation.org/packages/ggplot2/topics/stat_summary_2d'>ggplot2::stat_summary_hex</a></code>.</p></td>
+      <td><p>graphical arguments to be passed to <code><a href='https://ggplot2.tidyverse.org/reference/stat_summary_2d.html'>ggplot2::stat_summary_hex</a></code>.</p></td>
     </tr>
     </table>
     
