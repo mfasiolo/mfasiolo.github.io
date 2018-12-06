@@ -5,20 +5,47 @@
 
 <br>
 
+### Generalized Additive Models 
+
 The following packages are part of the output of my research on GAM models:
 
    - **mgcViz**: visual tools for Generalized Additive Models. See the github [source code](https://github.com/mfasiolo/mgcViz) and the [online manual](mgcViz/index.html). Available on [CRAN](https://cran.r-project.org/web/packages/mgcViz/index.html).
    
+<center>
+<img src="smooth.jpeg" alt="drawing" style="width:600px;"/> 
+</center>
+
+   
    - **qgam**: quantile additive model in R. See the github [source code](https://github.com/mfasiolo/qgam) and the [online manual](https://mfasiolo.github.io/qgam). Available on [CRAN](https://cran.r-project.org/web/packages/qgam/index.html).
    
+<center>
+<img src="effectUK.jpeg" alt="drawing" style="width:800px;"/> 
+</center>
+   
 <br>
+<br>
+
+### Monte Carlo methods and intractable likelihoods
    
 I have also authored the following packages, related to my research on Monte Carlo methods and intractable likelihoods:
 
    - **mvnfast**: fast multivariate normal and student's t methods. See the github [source code](https://github.com/mfasiolo/mvnfast) and the [online manual](http://mfasiolo.github.io/mvnfast/). Available on [CRAN](https://cran.r-project.org/web/packages/mvnfast/index.html).
    
+<center>
+<img src="mvnfast.jpeg" alt="drawing" style="width:600px;"/> 
+</center>
+
+   
    - **synlik**: synthetic likelihood methods for intractable likelihoods. See the github [source code](https://github.com/mfasiolo/synlik) and the [vignette](https://cran.r-project.org/web/packages/synlik/vignettes/synlik.html). Available on [CRAN](https://cran.r-project.org/web/packages/synlik/index.html).
    
+<center>
+<img src="deterSlice.png" alt="drawing" style="width:600px;"/> 
+</center>
+
    - **esaddle**: tools for fitting the Extended Empirical Saddlepoint (EES) density. See the github [source code](https://github.com/mfasiolo/esaddle) and the [vignette](https://cran.r-project.org/web/packages/esaddle/vignettes/esaddle.html). Available on [CRAN](https://cran.r-project.org/web/packages/esaddle/index.html).
+   
+<center>
+<img src="esaddle.jpeg" alt="drawing" style="width:800px;"/> 
+</center>
 
 
