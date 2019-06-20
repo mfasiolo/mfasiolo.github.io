@@ -3,7 +3,7 @@
 
 #### Articles on Generalized Additive Models
 
-   - Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2018. Scalable visualisation methods for modern Generalized Additive Models. arXiv preprint arXiv:1809.10632.
+   - Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2019. Scalable visualisation methods for modern Generalized Additive Models. Journal of Computational and Graphical Statistics (to appear).
 
    - Fasiolo, M., Goude, Y., Nedellec, R. and Wood, S.N., 2017. Fast calibrated additive quantile regression. arXiv preprint arXiv:1707.03307.
    

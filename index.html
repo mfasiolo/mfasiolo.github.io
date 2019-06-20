@@ -20,7 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
 
@@ -53,9 +54,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -74,8 +73,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -91,7 +96,6 @@ body {
   padding-top: 57px;
   margin-top: -57px;
 }
-
 .section h2 {
   padding-top: 57px;
   margin-top: -57px;
@@ -111,6 +115,43 @@ body {
 .section h6 {
   padding-top: 57px;
   margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -132,19 +173,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -227,18 +334,21 @@ $(document).ready(function () {
 <h2>News</h2>
 <p><strong>Publications</strong></p>
 <ul>
+<li><p>May19: our paper titled “Scalable visualisation methods for modern Generalized Additive Models” has been <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942">accepted</a> by the Journal of Computational and Graphical Statistics. The comments of three anonimous reviewers and an associate editor were extremely helpful in improving the paper.</p></li>
 <li><p>Sep18: we have arXived a new paper titled “Scalable visualisation methods for modern Generalized Additive Models”. It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> R package.</p></li>
 <li><p>Aug18: as <a href="https://twitter.com/ABC_Research/status/1032218764719214592">Scott Sisson announced on Twitter</a>, the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled “Approximate methods for dynamic ecological models”, where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. A free <a href="https://arxiv.org/abs/1511.02644">Arxiv version</a> of the chapter is also available.</p></li>
 <li><p>May18: our paper titled “An extended empirical saddlepoint approximation for intractable likelihoods” has been <a href="https://projecteuclid.org/euclid.ejs/1527300140">published</a> on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.</p></li>
 </ul>
 <p><strong>Training</strong></p>
 <ul>
-<li>Jul18: I have thought an introductory course on GAM modelling using the <a href="https://cran.r-project.org/web/packages/mgcv/index.html">mgcv</a>, <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> and <a href="http://mfasiolo.github.io/qgam/">qgam</a> R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed <a href="https://www.youtube.com/watch?v=a6sTwkQGt3E&amp;t=50s">here</a> and <a href="https://www.youtube.com/watch?v=44UUBuF9RFM">here</a>, while all the material (slides, exercises and solutions) can be found <a href="https://github.com/mfasiolo/workshop_UseR18">here</a>.</li>
+<li><p>Jun19: <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a> and I are going to teach a one day course on additive modelling at the <a href="https://www.rss.org.uk/RSS/Training/Public_courses/RSS/pro_dev/RSS_training_courses_sub/public_training.aspx?hkey=80752d6b-205c-4865-8068-ab827079ced2">RSS</a> in London.</p></li>
+<li><p>Jul18: I have thought an introductory course on GAM modelling using the <a href="https://cran.r-project.org/web/packages/mgcv/index.html">mgcv</a>, <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> and <a href="http://mfasiolo.github.io/qgam/">qgam</a> R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed <a href="https://www.youtube.com/watch?v=a6sTwkQGt3E&amp;t=50s">here</a> and <a href="https://www.youtube.com/watch?v=44UUBuF9RFM">here</a>, while all the material (slides, exercises and solutions) can be found <a href="https://github.com/mfasiolo/workshop_UseR18">here</a>.</p></li>
 </ul>
 <p><strong>Software</strong></p>
 <ul>
+<li><p>June19: a new version of the qgam R package has been release on CRAN. It features automatic loss smoothness selection, using the methods described in our <a href="https://arxiv.org/abs/1707.03307">arXived paper</a>.</p></li>
 <li><p>Jul18: the mgcViz R package has finally arrived on CRAN. It contains quite a lot of new visualizations and diagnostics for GAMs models, mostly implemented in ggplot2.</p></li>
-<li><p>May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new “Bayesian sandwich” calibration method can be found in our <a href="https://arxiv.org/abs/1707.03307">Arxived paper</a>.</p></li>
+<li><p>May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new “Bayesian sandwich” calibration method can be found in our <a href="https://arxiv.org/abs/1707.03307">arxived paper</a>.</p></li>
 </ul>
 </div>
 
