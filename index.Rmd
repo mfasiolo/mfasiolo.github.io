@@ -22,7 +22,7 @@ Beside doing research, I enjoy teaching short courses on GAM modelling, so if yo
 
 **Publications**
 
-  - May19: our paper titled "Scalable visualisation methods for modern Generalized Additive Models" has been [accepted](https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942) by the Journal of Computational and Graphical Statistics. The comments of three anonimous reviewers and an associate editor were extremely helpful in improving the paper.
+  - May19: our paper titled "Scalable visualisation methods for modern Generalized Additive Models" has been [accepted](https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942) by the Journal of Computational and Graphical Statistics. The comments of three anonymous reviewers and an associate editor were extremely helpful in improving the paper.
 
   - Sep18: we have arXived a new paper titled "Scalable visualisation methods for modern Generalized Additive Models". It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) R package.
 
