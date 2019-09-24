@@ -32,4 +32,4 @@ navbar:
 output:
   html_document:
     theme: spacelab
-    highlight: espresso
+    highlight: textmate
