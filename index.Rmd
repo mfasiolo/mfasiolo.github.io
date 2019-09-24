@@ -11,7 +11,7 @@
 
 <br>
 
-I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D and [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/). My other research interests are intractable likelihood and importance sampling. 
+I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D and [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/). My other research interests are intractable likelihoods and importance sampling. 
 
 Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
 
@@ -31,6 +31,10 @@ Beside doing research, I enjoy teaching short courses on GAM modelling, so if yo
   - May18: our paper titled "An extended empirical saddlepoint approximation for intractable likelihoods" has been [published](https://projecteuclid.org/euclid.ejs/1527300140) on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.   
 
 **Training**  
+
+  - Sep19: I will deliver a 1-day GAM course [WhyR19](http://whyr.pl/2019/) conference in Warsaw. The material is freely available [here](https://github.com/mfasiolo/workshop_WARSAW19).  
+
+  - Sep19: I delivered a training course on GAM modelling at the [Euregio Summer School in Data Science](https://dsrschools19.events.unibz.it/program/) in Bolzano (Bozen). The material is [here](https://github.com/mfasiolo/workshop_BOZEN19).  
 
   - Jun19: [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/) and I are going to teach a one day course on additive modelling at the [RSS](https://www.rss.org.uk/RSS/Training/Public_courses/RSS/pro_dev/RSS_training_courses_sub/public_training.aspx?hkey=80752d6b-205c-4865-8068-ab827079ced2) in London.  
 

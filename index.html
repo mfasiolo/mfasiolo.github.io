@@ -7,11 +7,12 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title></title>
+<title>index.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -68,7 +69,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -229,18 +229,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -286,7 +274,7 @@ $(document).ready(function () {
   <a href="software.html">
     <span class="fa fa-cubes"></span>
      
-    Sofware
+    Software
   </a>
 </li>
       </ul>
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <img src="me_serious.jpg" alt="drawing" style="width:600px;"/>
 </center>
 <p><br></p>
-<p>I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&amp;D and <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a>. My other research interests are intractable likelihood and importance sampling.</p>
+<p>I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&amp;D and <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a>. My other research interests are intractable likelihoods and importance sampling.</p>
 <p>Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don’t hesitate to <a href="mailto:matteo.fasiolo@gmail.com">contact me</a>.</p>
 <p><br></p>
 </div>
@@ -341,6 +329,8 @@ $(document).ready(function () {
 </ul>
 <p><strong>Training</strong></p>
 <ul>
+<li><p>Sep19: I will deliver a 1-day GAM course <a href="http://whyr.pl/2019/">WhyR19</a> conference in Warsaw. The material is freely available <a href="https://github.com/mfasiolo/workshop_WARSAW19">here</a>.</p></li>
+<li><p>Sep19: I delivered a training course on GAM modelling at the <a href="https://dsrschools19.events.unibz.it/program/">Euregio Summer School in Data Science</a> in Bolzano (Bozen). The material is <a href="https://github.com/mfasiolo/workshop_BOZEN19">here</a>.</p></li>
 <li><p>Jun19: <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a> and I are going to teach a one day course on additive modelling at the <a href="https://www.rss.org.uk/RSS/Training/Public_courses/RSS/pro_dev/RSS_training_courses_sub/public_training.aspx?hkey=80752d6b-205c-4865-8068-ab827079ced2">RSS</a> in London.</p></li>
 <li><p>Jul18: I have thought an introductory course on GAM modelling using the <a href="https://cran.r-project.org/web/packages/mgcv/index.html">mgcv</a>, <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> and <a href="http://mfasiolo.github.io/qgam/">qgam</a> R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed <a href="https://www.youtube.com/watch?v=a6sTwkQGt3E&amp;t=50s">here</a> and <a href="https://www.youtube.com/watch?v=44UUBuF9RFM">here</a>, while all the material (slides, exercises and solutions) can be found <a href="https://github.com/mfasiolo/workshop_UseR18">here</a>.</p></li>
 </ul>
@@ -369,6 +359,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -5,7 +5,7 @@
 
    - Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2019. Scalable visualisation methods for modern Generalized Additive Models. Journal of Computational and Graphical Statistics (to appear).
 
-   - Fasiolo, M., Goude, Y., Nedellec, R. and Wood, S.N., 2017. Fast calibrated additive quantile regression. arXiv preprint arXiv:1707.03307.
+   - Fasiolo, M., Goude, Y., Nedellec, R., Zaffran M. and Wood, S.N., 2017. Fast calibrated additive quantile regression. arXiv preprint arXiv:1707.03307.
    
    - Wood, S.N. and Fasiolo, M., 2017. A generalized Fellner‐Schall method for smoothing parameter optimization with application to Tweedie location, scale and shape models. Biometrics, 73(4), pp.1071-1081.
    
@@ -24,6 +24,8 @@
 <br>
 
 #### Interdisciplinary publications
+
+   - Noacco, V., Duffy, C. J., Wagener, T., Worrall, F., Fasiolo, M. and Howden, N.J.K. (2019). Drivers of inter-and intra-annual variability of dissolved organic carbon concentration in the River Thames between 1884 and 2013. Hydrological processes. 33 (6), 994-1012.
 
    - Tomaschek, F., Tucker, B.V., Fasiolo, M. and Baayen, R.H., 2018. Practice makes perfect: The consequences of lexical proficiency for articulation. Linguistics Vanguard, 4(s2).
 

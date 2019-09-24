@@ -10,7 +10,7 @@ navbar:
     - text: "Publications"
       icon: fa-paper-plane 
       href: publications.html
-    - text: "Sofware"
+    - text: "Software"
       icon: fa-cubes 
       href: software.html
     #- text: "Blog"
