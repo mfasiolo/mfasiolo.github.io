@@ -45,7 +45,7 @@ Beside doing research, I enjoy teaching short courses on GAM modelling, so if yo
 **Software**
 
   - March20: a new version of the mgcViz R package is now on CRAN. The main new feature is methods for
-    computing and visualising the accumulate local effects of [Apley and Zhu, 2016](https://arxiv.org/abs/1612.08468) for GAMs. Such plots are particularly useful for multinomial regression models. 
+    computing and visualising the accumulated local effects of [Apley and Zhu, 2016](https://arxiv.org/abs/1612.08468) for GAMs. Such plots are particularly useful for multinomial regression models. 
 
   - June19: a new version of the qgam R package has been release on CRAN. It features automatic loss smoothness selection, using the methods described in our [arXived paper](https://arxiv.org/abs/1707.03307).
 
