@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quantile additive models using qgam and mgcViz • mgcViz</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Quantile additive models using qgam and mgcViz">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
@@ -30,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mgcViz</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.6</span>
       </span>
     </div>
 
@@ -38,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -70,7 +71,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/mfasiolo/mgcViz">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -83,13 +84,14 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Quantile additive models using qgam and mgcViz</h1>
                         <h4 class="author">Matteo Fasiolo and Raphael Nedellec</h4>
             
-            <h4 class="date">June 20 2019</h4>
+            <h4 class="date">March 04 2020</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/mfasiolo/mgcViz/blob/master/vignettes/qgam_mgcViz.Rmd"><code>vignettes/qgam_mgcViz.Rmd</code></a></small>
       <div class="hidden name"><code>qgam_mgcViz.Rmd</code></div>
@@ -109,7 +111,7 @@ text-align: justify}
 <p>The main fitting functions are:</p>
 <ul>
 <li>
-<code>qgam()</code> fits an additive quantile regression model to a single quantile. Very similar to <code><a href="https://www.rdocumentation.org/packages/mgcv/topics/gam">mgcv::gam()</a></code>. It returns an object of class <code>qgam</code>, which inherits from <code><a href="https://www.rdocumentation.org/packages/mgcv/topics/gamObject">mgcv::gamObject</a></code>.</li>
+<code>qgam()</code> fits an additive quantile regression model to a single quantile. Very similar to <code><a href="https://rdrr.io/pkg/mgcv/man/gam.html">mgcv::gam()</a></code>. It returns an object of class <code>qgam</code>, which inherits from <code><a href="https://rdrr.io/pkg/mgcv/man/gamObject.html">mgcv::gamObject</a></code>.</li>
 <li>
 <code>mqgam()</code> fits the same additive quantile regression model to several quantiles. It is more efficient that calling <code>qgam()</code> several times, especially in terms of memory usage.</li>
 <li>
@@ -122,48 +124,48 @@ text-align: justify}
 <p>We simulate some data from the model: <span class="math display">\[
 y = f_0(x_0)+f_1(x_1)+f_2(x_2)+f_3(x_3)+e,\;\;\; e \sim N(0, 2)
 \]</span> by doing</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(mgcViz)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">2</span>)
-dat &lt;-<span class="st"> </span><span class="kw">gamSim</span>(<span class="dv">1</span>, <span class="dt">n=</span><span class="dv">1000</span>, <span class="dt">dist=</span><span class="st">"normal"</span>, <span class="dt">scale=</span><span class="dv">2</span>)[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"y"</span>, <span class="st">"x0"</span>, <span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)]</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(mgcViz)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">dat &lt;-<span class="st"> </span><span class="kw">gamSim</span>(<span class="dv">1</span>, <span class="dt">n=</span><span class="dv">1000</span>, <span class="dt">dist=</span><span class="st">"normal"</span>, <span class="dt">scale=</span><span class="dv">2</span>)[<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"y"</span>, <span class="st">"x0"</span>, <span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)]</a></code></pre></div>
 <pre><code>## Gu &amp; Wahba 4 term additive model</code></pre>
 <p>We start by fitting a linear quantile model for the median:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(y ~<span class="st"> </span>x0 +<span class="st"> </span>x1 +<span class="st"> </span>x2 +<span class="st"> </span>x3, <span class="dt">data=</span>dat, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">fit1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(y <span class="op">~</span><span class="st"> </span>x0 <span class="op">+</span><span class="st"> </span>x1 <span class="op">+</span><span class="st"> </span>x2 <span class="op">+</span><span class="st"> </span>x3, <span class="dt">data=</span>dat, <span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5.......done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit1, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit1, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD2-1.png" width="700" style="display:block; margin: auto"> We use <code>pages = 1</code> to plot on a single page, and <code>allTerms</code> to plot also the parametric effects (the plotting method used here plots only smooth or random effects by default).</p>
 <p>Should we use a smooth effect of <code>x0</code>? If the effect of <code>x0</code> was non-linear, we would expect that the number of observations falling below the fit would depart from 0.5, as we move along <code>x0</code>. A rudimental diagnostic plot is:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(dat$x0, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sign">sign</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/residuals">residuals</a></span>(fit1)) +<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/Normal">rnorm</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(dat), <span class="dv">0</span>, <span class="fl">0.05</span>), <span class="dt">col =</span> <span class="kw">alpha</span>(<span class="dv">1</span>, <span class="fl">0.4</span>), <span class="dt">pch =</span> <span class="dv">16</span>,
-     <span class="dt">ylab =</span> <span class="st">"Residuals sign"</span>, <span class="dt">xlab =</span> <span class="st">"x0"</span>)</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(dat<span class="op">$</span>x0, <span class="kw"><a href="https://rdrr.io/r/base/sign.html">sign</a></span>(<span class="kw"><a href="https://rdrr.io/r/stats/residuals.html">residuals</a></span>(fit1)) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(dat), <span class="dv">0</span>, <span class="fl">0.05</span>), <span class="dt">col =</span> <span class="kw">alpha</span>(<span class="dv">1</span>, <span class="fl">0.4</span>), <span class="dt">pch =</span> <span class="dv">16</span>,</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">     <span class="dt">ylab =</span> <span class="st">"Residuals sign"</span>, <span class="dt">xlab =</span> <span class="st">"x0"</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD3a-1.png" width="700" style="display:block; margin: auto"> But residual pattern is more visible in the following plot:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit1, <span class="st">"x0"</span>) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit1, <span class="st">"x0"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD3-1.png" width="700" style="display:block; margin: auto"> There is definitely a pattern here. An analogous plot along <code>x2</code> also shows a residual pattern, hence we consider the model:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(y ~<span class="st"> </span><span class="kw">s</span>(x0) +<span class="st"> </span>x1 +<span class="st"> </span><span class="kw">s</span>(x2) +<span class="st"> </span>x3, <span class="dt">data=</span>dat, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">fit2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(y <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(x0) <span class="op">+</span><span class="st"> </span>x1 <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(x2) <span class="op">+</span><span class="st"> </span>x3, <span class="dt">data=</span>dat, <span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5.......done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"x0"</span>) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"x0"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD4-1.png" width="700" style="display:block; margin: auto"> Looks much better, and leads to much lower AIC:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/AIC">AIC</a></span>(fit1) -<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/AIC">AIC</a></span>(fit2)</code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/stats/AIC.html">AIC</a></span>(fit1) <span class="op">-</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/AIC.html">AIC</a></span>(fit2)</a></code></pre></div>
 <pre><code>## [1] 764.418</code></pre>
 <p>We can plot all the smooth effects by doing:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit2), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit2), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD5-1.png" width="576" style="display:block; margin: auto"> To print only the second we do</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit2, <span class="dt">select =</span> <span class="dv">2</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit2, <span class="dt">select =</span> <span class="dv">2</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD6-1.png" width="700" style="display:block; margin: auto"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit2, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit2, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD7-1.png" width="700" style="display:block; margin: auto"> Now we fit this model to multiple quantiles and plot the fitted effects:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mqgamV.html">mqgamV</a></span>(y ~<span class="st"> </span><span class="kw">s</span>(x0) +<span class="st"> </span>x1 +<span class="st"> </span><span class="kw">s</span>(x2) +<span class="st"> </span>x3, <span class="dt">data=</span>dat,
-              <span class="dt">qu =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="dt">length.out =</span> <span class="dv">5</span>))</code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">fit &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mqgamV.html">mqgamV</a></span>(y <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(x0) <span class="op">+</span><span class="st"> </span>x1 <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(x2) <span class="op">+</span><span class="st"> </span>x3, <span class="dt">data=</span>dat,</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">              <span class="dt">qu =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="dt">length.out =</span> <span class="dv">5</span>))</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5.......done 
 ## qu = 0.3.......done 
 ## qu = 0.7........done 
 ## qu = 0.1........done 
 ## qu = 0.9........done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD8-1.png" width="700" style="display:block; margin: auto"></p>
 <p>We can manipulate the five fitted quantile GAMs individually, for example</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit[[<span class="dv">1</span>]], <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit[[<span class="dv">1</span>]], <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/fourD9-1.png" width="700" style="display:block; margin: auto"></p>
 </div>
 <div id="random-effect-modelling-lexical-decision-task" class="section level1">
@@ -187,60 +189,60 @@ dat &lt;-<span class="st"> </span><span class="kw">gamSim</span>(<span class="dv
 <code>Word</code> a factor with 79 words as levels.</li>
 </ul>
 <p>We might be interested in modeling the relation between the response time and length, frequency, native language and trial, and we might want to control for word and subject. We start by loading the data and fitting a simple QGAM model for the median:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(languageR)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(lexdec)
-
-lexdec$RT0 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Log">exp</a></span>( lexdec$RT ) <span class="co"># Should not need to use log-responses to normalize</span>
-
-fit &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 ~<span class="st"> </span><span class="kw">s</span>(Trial) +<span class="st"> </span>NativeLanguage +<span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) +<span class="st"> </span><span class="kw">s</span>(Frequency),
-            <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(languageR)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(lexdec)</a>
+<a class="sourceLine" id="cb20-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb20-4" data-line-number="4">lexdec<span class="op">$</span>RT0 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>( lexdec<span class="op">$</span>RT ) <span class="co"># Should not need to use log-responses to normalize</span></a>
+<a class="sourceLine" id="cb20-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb20-6" data-line-number="6">fit &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(Trial) <span class="op">+</span><span class="st"> </span>NativeLanguage <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Frequency),</a>
+<a class="sourceLine" id="cb20-7" data-line-number="7">            <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5.............done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex1-1.png" width="700" style="display:block; margin: auto"> It is natural to ask ourselves whether we should control for <code>Subject</code> and for <code>Word</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># check1D(fit, "Subject") would not work because it was not included in the original fit</span>
-<span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit, lexdec$Subject) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="co"># check1D(fit, "Subject") would not work because it was not included in the original fit</span></a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit, lexdec<span class="op">$</span>Subject) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex2-1.png" width="700" style="display:block; margin: auto"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit, lexdec$Word) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit, lexdec<span class="op">$</span>Word) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex2-2.png" width="700" style="display:block; margin: auto"> It seems so, hence we refit using two random effects:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 ~<span class="st"> </span><span class="kw">s</span>(Trial) +<span class="st"> </span>NativeLanguage +<span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) +
-<span class="st">                    </span><span class="kw">s</span>(Frequency) +<span class="st"> </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) +<span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),
-            <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">fit2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(Trial) <span class="op">+</span><span class="st"> </span>NativeLanguage <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="st">                    </span><span class="kw">s</span>(Frequency) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),</a>
+<a class="sourceLine" id="cb25-3" data-line-number="3">            <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5..........done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"Subject"</span>) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"Subject"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex3-1.png" width="700" style="display:block; margin: auto"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"Word"</span>) +<span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/check1D.html">check1D</a></span>(fit2, <span class="st">"Word"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_gridQCheck1D.html">l_gridQCheck1D</a></span>(<span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex3-2.png" width="700" style="display:block; margin: auto"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/AIC">AIC</a></span>(fit) -<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/AIC">AIC</a></span>(fit2)</code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/stats/AIC.html">AIC</a></span>(fit) <span class="op">-</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/AIC.html">AIC</a></span>(fit2)</a></code></pre></div>
 <pre><code>## [1] 817.0046</code></pre>
 <p>We achieve lower AIC and the residuals checks look better (especially the one for <code>Subject</code>).</p>
 <p>A potentially interesting question is then: is the effect of <code>Trial</code> different for native and non-native speakers? We can verify this by using a by-factor smooth:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 ~<span class="st">  </span><span class="kw">s</span>(Trial, <span class="dt">by =</span> NativeLanguage) +<span class="st"> </span><span class="co"># &lt;- by-factor smooth</span>
-<span class="st">                    </span>NativeLanguage +<span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) +<span class="st"> </span><span class="kw">s</span>(Frequency) +
-<span class="st">                    </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) +<span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),
-             <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1">fit3 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/qgamV.html">qgamV</a></span>(RT0 <span class="op">~</span><span class="st">  </span><span class="kw">s</span>(Trial, <span class="dt">by =</span> NativeLanguage) <span class="op">+</span><span class="st"> </span><span class="co"># &lt;- by-factor smooth</span></a>
+<a class="sourceLine" id="cb31-2" data-line-number="2"><span class="st">                    </span>NativeLanguage <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Frequency) <span class="op">+</span></a>
+<a class="sourceLine" id="cb31-3" data-line-number="3"><span class="st">                    </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),</a>
+<a class="sourceLine" id="cb31-4" data-line-number="4">             <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="fl">0.5</span>)</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5...........done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit3), <span class="dt">pages =</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit3), <span class="dt">pages =</span> <span class="dv">1</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex4-1.png" width="700" style="display:block; margin: auto"> Can look directly at the difference between the by-factor smooths by doing:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html">sm</a></span>(fit3, <span class="dv">1</span>)
-s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html">sm</a></span>(fit3, <span class="dv">2</span>)
-<span class="kw"><a href="../reference/plotDiff.html">plotDiff</a></span>(s1, s2) +<span class="st"> </span><span class="kw"><a href="../reference/l_ciPoly.html">l_ciPoly</a></span>() +<span class="st"> </span><span class="kw"><a href="../reference/l_fitLine.html">l_fitLine</a></span>()</code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">s1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html">sm</a></span>(fit3, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb34-2" data-line-number="2">s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html">sm</a></span>(fit3, <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb34-3" data-line-number="3"><span class="kw"><a href="../reference/plotDiff.html">plotDiff</a></span>(s1, s2) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_ciPoly.html">l_ciPoly</a></span>() <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/l_fitLine.html">l_fitLine</a></span>()</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex5-1.png" width="700" style="display:block; margin: auto"> There might be something there, but the difference is not very strong.</p>
 <p>Now that we have converged on a (hopefully reasonable) model, we can fit it to several quantiles:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit5 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mqgamV.html">mqgamV</a></span>(RT0 ~<span class="st"> </span><span class="kw">s</span>(Trial, <span class="dt">by =</span> NativeLanguage) +<span class="st"> </span>NativeLanguage +<span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) +
-<span class="st">                </span>+<span class="st"> </span><span class="kw">s</span>(Frequency) +<span class="st"> </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) +<span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),
-                <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="fl">0.2</span>, <span class="fl">0.8</span>, <span class="dt">length.out =</span> <span class="dv">5</span>))</code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1">fit5 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mqgamV.html">mqgamV</a></span>(RT0 <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(Trial, <span class="dt">by =</span> NativeLanguage) <span class="op">+</span><span class="st"> </span>NativeLanguage <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Length, <span class="dt">k =</span> <span class="dv">5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="st">                </span><span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Frequency) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Subject, <span class="dt">bs =</span> <span class="st">"re"</span>) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(Word, <span class="dt">bs =</span> <span class="st">"re"</span>),</a>
+<a class="sourceLine" id="cb35-3" data-line-number="3">                <span class="dt">data =</span> lexdec, <span class="dt">qu =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="fl">0.2</span>, <span class="fl">0.8</span>, <span class="dt">length.out =</span> <span class="dv">5</span>))</a></code></pre></div>
 <pre><code>## Estimating learning rate. Each dot corresponds to a loss evaluation. 
 ## qu = 0.5...........done 
 ## qu = 0.35...........done 
 ## qu = 0.65............done 
 ## qu = 0.2..............done 
 ## qu = 0.8...........done</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/graphics/topics/plot">plot</a></span>(fit5, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">2</span>, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="kw"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(fit5, <span class="dt">allTerms =</span> <span class="ot">TRUE</span>), <span class="dt">pages =</span> <span class="dv">2</span>, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <p><img src="qgam_mgcViz_files/figure-html/lex6-1.png" width="700" style="display:block; margin: auto"><img src="qgam_mgcViz_files/figure-html/lex6-2.png" width="700" style="display:block; margin: auto"> The effects are fairly stable across quantiles, the effect of <code>Frequency</code> might be stronger for high quantiles. We can examine the fitted quantile models individually:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/summary">summary</a></span>(fit5[[<span class="dv">5</span>]])</code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(fit5[[<span class="dv">5</span>]])</a></code></pre></div>
 <pre><code>## 
 ## Family: elf 
 ## Link function: identity 
@@ -282,6 +284,7 @@ s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html"
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -297,17 +300,20 @@ s2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/sm.html"
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by Matteo Fasiolo, Raphael Nedellec.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

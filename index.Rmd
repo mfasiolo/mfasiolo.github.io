@@ -22,6 +22,8 @@ Beside doing research, I enjoy teaching short courses on GAM modelling, so if yo
 
 **Publications**
 
+  - March20: our paper titled "Fast calibrated additive quantile regression" has been accepted for publication on the Journal of the American Statistical Association (Theory and Methods). Many thanks to the reviewers for their constructive comments.
+
   - May19: our paper titled "Scalable visualisation methods for modern Generalized Additive Models" has been [accepted](https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942) by the Journal of Computational and Graphical Statistics. The comments of three anonymous reviewers and an associate editor were extremely helpful in improving the paper.
 
   - Sep18: we have arXived a new paper titled "Scalable visualisation methods for modern Generalized Additive Models". It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) R package.
@@ -41,6 +43,9 @@ Beside doing research, I enjoy teaching short courses on GAM modelling, so if yo
   - Jul18: I have thought an introductory course on GAM modelling using the [mgcv](https://cran.r-project.org/web/packages/mgcv/index.html), [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) and [qgam](http://mfasiolo.github.io/qgam/) R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed [here](https://www.youtube.com/watch?v=a6sTwkQGt3E&t=50s) and [here](https://www.youtube.com/watch?v=44UUBuF9RFM), while all the material (slides, exercises and solutions) can be found [here](https://github.com/mfasiolo/workshop_UseR18).  
 
 **Software**
+
+  - March20: a new version of the mgcViz R package is now on CRAN. The main new feature is methods for
+    computing and visualising the accumulate local effects of [Apley and Zhu, 2016](https://arxiv.org/abs/1612.08468) for GAMs. Such plots are particularly useful for multinomial regression models. 
 
   - June19: a new version of the qgam R package has been release on CRAN. It features automatic loss smoothness selection, using the methods described in our [arXived paper](https://arxiv.org/abs/1707.03307).
 

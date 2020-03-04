@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>index.utf8.md</title>
+<title>index.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -234,6 +233,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -339,6 +339,7 @@ $(document).ready(function () {
 <h2>News</h2>
 <p><strong>Publications</strong></p>
 <ul>
+<li><p>March20: our paper titled “Fast calibrated additive quantile regression” has been <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942">accepted</a> by the Journal of the American Statistical Association (Theory and Methods). Many thanks to the reviewers for their constructive comments.</p></li>
 <li><p>May19: our paper titled “Scalable visualisation methods for modern Generalized Additive Models” has been <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942">accepted</a> by the Journal of Computational and Graphical Statistics. The comments of three anonymous reviewers and an associate editor were extremely helpful in improving the paper.</p></li>
 <li><p>Sep18: we have arXived a new paper titled “Scalable visualisation methods for modern Generalized Additive Models”. It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> R package.</p></li>
 <li><p>Aug18: as <a href="https://twitter.com/ABC_Research/status/1032218764719214592">Scott Sisson announced on Twitter</a>, the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled “Approximate methods for dynamic ecological models”, where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. A free <a href="https://arxiv.org/abs/1511.02644">Arxiv version</a> of the chapter is also available.</p></li>
@@ -353,6 +354,7 @@ $(document).ready(function () {
 </ul>
 <p><strong>Software</strong></p>
 <ul>
+<li><p>March20: a new version of the mgcViz R package is now on CRAN. The main new feature are methods for computing and visualising the accumulate local effects of <a href="https://arxiv.org/abs/1612.08468">Apley and Zhu, 2016</a> for GAMs. Such plots are particularly useful for multinomial regression models.</p></li>
 <li><p>June19: a new version of the qgam R package has been release on CRAN. It features automatic loss smoothness selection, using the methods described in our <a href="https://arxiv.org/abs/1707.03307">arXived paper</a>.</p></li>
 <li><p>Jul18: the mgcViz R package has finally arrived on CRAN. It contains quite a lot of new visualizations and diagnostics for GAMs models, mostly implemented in ggplot2.</p></li>
 <li><p>May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new “Bayesian sandwich” calibration method can be found in our <a href="https://arxiv.org/abs/1707.03307">arxived paper</a>.</p></li>
