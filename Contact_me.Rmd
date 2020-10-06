@@ -2,7 +2,7 @@
 <br>
 
 ```{r pressure, echo=FALSE, fig.cap="", out.width = '55%', fig.align="center"}
-knitr::include_graphics("phone.png")
+knitr::include_graphics("phone.jpg")
 ```
 
 <center>

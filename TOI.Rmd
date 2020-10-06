@@ -1,0 +1,21 @@
+
+<br> 
+
+# Theory of Inference MATH35600/MATHM0019
+
+<br> 
+
+The course instructor is [Matteo Fasiolo](http://www.bristol.ac.uk/maths/people/matteo-fasiolo/overview.html) (Fry GA.17). There are 2 lectures (see below) and one computer lab-based tutorial (XXX - see BB page) each week. 20% of the course mark will be from an assessed practical project. The remaining 80% comes from a 2.5 hour exam consisting of 4 questions (no choice): an example is provided below. Tutorial sheet questions provide the best preparation for the exam. Office hours are XXX (see BB page).
+
+<br> 
+
+##### Course material
+
+The course will be based on the following material:
+
+* [Lecture Notes](TOI/notes.pdf) These may be updated as the course progresses.
+* [Matrix Notes](TOI/matrix.pdf) Essential revision notes on matrices.
+* [Core Statistics](https://www.maths.ed.ac.uk/~swood34/core-statistics.pdf) is a short textbook covering the material in this course, along with background and extensions. Chapter one should be reviewed for the essential background assumed by the course.
+* [JAGs manual](TOI/jags_user_manual.pdf) JAGS user manual is a handy reference for when we cover Bayesian computation. 
+    
+    

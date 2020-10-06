@@ -13,6 +13,9 @@ navbar:
     - text: "Software"
       icon: fa-cubes 
       href: software.html
+    - text: "Teaching"
+      icon: fa-graduation-cap
+      href: Teaching.html
     #- text: "Blog"
      # icon: fa-rss
      # href: https://YOURGITHUB.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES

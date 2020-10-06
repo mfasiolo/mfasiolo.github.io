@@ -1,0 +1,12 @@
+
+<br> 
+
+#### Statistical Computing 2
+
+I am teaching the Statistical Computing 2 module of the [COMPASS CDT program](http://www.bristol.ac.uk/cdt/compass/). The course, which is aimed at 1st year PhD students, explains how to interface R with C/C++ and introduces the Rcpp R package, as well as some of its extensions. The material is available [here](https://mfasiolo.github.io/sc2-2019/).
+ 
+<br> 
+
+#### Theory of Inference
+
+I am teaching the Theory of Inference (TOI) module to third and fourth year students. The course content is quite broad, ranging from standard hypothesis testing to Gibbs sampling in JAGs. The course material can be found [here](TOI.html).
