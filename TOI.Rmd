@@ -1,11 +1,16 @@
 
+<style>
+body {
+text-align: justify}
+</style>
+
 <br> 
 
 # Theory of Inference MATH35600/MATHM0019
 
 <br> 
 
-The course instructor is [Matteo Fasiolo](http://www.bristol.ac.uk/maths/people/matteo-fasiolo/overview.html) (Fry GA.17). There are 2 lectures (see below) and one computer lab-based tutorial (XXX - see BB page) each week. 20% of the course mark will be from an assessed practical project. The remaining 80% comes from a 2.5 hour exam consisting of 4 questions (no choice): an example is provided below. Tutorial sheet questions provide the best preparation for the exam. Office hours are XXX (see BB page).
+The course instructor is [Matteo Fasiolo](http://www.bristol.ac.uk/maths/people/matteo-fasiolo/overview.html) (Fry GA.17). There are 2 lectures and one computer lab-based tutorial each week (see BB page for details). 20% of the course mark will be from an assessed practical project. The remaining 80% comes from a 2.5 hour exam consisting of 4 questions (no choice): an example is provided below. Tutorial sheet questions provide the best preparation for the exam. Office hours are XXX (see BB page).
 
 <br> 
 
@@ -43,5 +48,21 @@ You can load them in R using code such as:
 ```{r eval=FALSE}
 dat <- read.table("https://mfasiolo.github.io/TOI/confound.txt")
 ```
+
+<br>   
+
+#### Group coursework
+
+The course work is different for MATH35600 and MATHM0019. The course work is to be completed in groups of three, to provide experience of team-working. You must arrange to be in a team with two others on the **same** course code as you (MATH35600 or MATHM0019). The coursework will be handed out on XXX. You should be sure to attend this lecture to pick up the coursework and register your work group (or to make sure that another group member did so for you). 
   
-    
+The 2018 course work is here: 
+
+* [MATH35600 practical](TOI/M35600-18.pdf) 
+* [MATHM0019 practical](TOI/M0019-18.pdf)
+* [Example of a nice practical report](TOI/MA35600-nice-report.pdf) This is nice because it is well structured, convincingly argued and targets the intended audience given in the assignment sheet well, and the work itself is well done. It is not intended to be used as a template for writing a report.
+
+<br>
+
+#### Software
+
+During the course we will use the R statistical software and the rjags package in particular. See the [CRAN webpage](https://cran.r-project.org/) to install R on your own computer. Before installing the rjags package, you will need to install the JAGS standalone software on your computer. See the installation instructions for different operating systems can be found [here](https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/).
