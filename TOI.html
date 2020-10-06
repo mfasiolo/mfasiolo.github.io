@@ -13,6 +13,7 @@
 
 <title>TOI.utf8</title>
 
+<script src="site_libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
@@ -24,6 +25,15 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -336,8 +346,8 @@ $(document).ready(function () {
 <p><br></p>
 <p>The course instructor is <a href="http://www.bristol.ac.uk/maths/people/matteo-fasiolo/overview.html">Matteo Fasiolo</a> (Fry GA.17). There are 2 lectures (see below) and one computer lab-based tutorial (XXX - see BB page) each week. 20% of the course mark will be from an assessed practical project. The remaining 80% comes from a 2.5 hour exam consisting of 4 questions (no choice): an example is provided below. Tutorial sheet questions provide the best preparation for the exam. Office hours are XXX (see BB page).</p>
 <p><br></p>
-<div id="course-material" class="section level5">
-<h5>Course material</h5>
+<div id="course-material" class="section level4">
+<h4>Course material</h4>
 <p>The course will be based on the following material:</p>
 <ul>
 <li><a href="TOI/notes.pdf">Lecture Notes</a> These may be updated as the course progresses.</li>
@@ -345,6 +355,29 @@ $(document).ready(function () {
 <li><a href="https://www.maths.ed.ac.uk/~swood34/core-statistics.pdf">Core Statistics</a> is a short textbook covering the material in this course, along with background and extensions. Chapter one should be reviewed for the essential background assumed by the course.</li>
 <li><a href="TOI/jags_user_manual.pdf">JAGs manual</a> JAGS user manual is a handy reference for when we cover Bayesian computation.</li>
 </ul>
+<p>Further relevant books are:</p>
+<ul>
+<li>D.R. Cox (2006) <em>Principles of Statistical Inference</em> also covers much of the material in the course.</li>
+<li>A.C. Davison (2003) <em>Statistical Models</em> covers everything we cover and much more.</li>
+<li>G. Casella and R.L Berger (1990) <em>Statistical Inference</em> covers many of the topics in greater mathematical depth.</li>
+<li>Daniel Kahneman’s <em>Thinking Fast and Slow</em> has alot of interesting things to say about statistical reasoning, and the built in flaws in how we humans tend to reason and make inferences.</li>
+</ul>
+<p>If you need to brush up on basic matrix algebra and multivariate calculus, you might want to have a look at:</p>
+<ul>
+<li><a href="http://www.sosmath.com/matrix/matrix.html">Basic matrix algebra</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Econometric_Theory/Matrix_Differentiation">Simple matrix differentiation</a></li>
+<li><a href="https://mathinsight.org/taylors_theorem_multivariable_introduction">Simple explanation of multivariate Taylor expansion</a></li>
+</ul>
+<p>These are some data sets that you might need during the course:</p>
+<ul>
+<li><a href="TOI/confound.txt">confound.txt</a></li>
+<li><a href="TOI/urchin.vol.dat">urchin.vol.dat</a></li>
+<li><a href="TOI/bccd.dat">bccd.dat</a></li>
+<li><a href="TOI/sh-H1N1.dat">sh-H1N1.dat</a></li>
+<li><a href="TOI/algae.dat">algae.dat</a></li>
+</ul>
+<p>You can load them in R using code such as:</p>
+<pre class="r"><code>dat &lt;- read.table(&quot;https://people.maths.bris.ac.uk/~sw15190/TOI/confound.txt&quot;)</code></pre>
 </div>
 </div>
 

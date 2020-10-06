@@ -9,7 +9,7 @@ The course instructor is [Matteo Fasiolo](http://www.bristol.ac.uk/maths/people/
 
 <br> 
 
-##### Course material
+#### Course material
 
 The course will be based on the following material:
 
@@ -17,5 +17,31 @@ The course will be based on the following material:
 * [Matrix Notes](TOI/matrix.pdf) Essential revision notes on matrices.
 * [Core Statistics](https://www.maths.ed.ac.uk/~swood34/core-statistics.pdf) is a short textbook covering the material in this course, along with background and extensions. Chapter one should be reviewed for the essential background assumed by the course.
 * [JAGs manual](TOI/jags_user_manual.pdf) JAGS user manual is a handy reference for when we cover Bayesian computation. 
-    
+
+Further relevant books are:
+
+* D.R. Cox (2006) *Principles of Statistical Inference* also covers much of the material in the course. 
+* A.C. Davison (2003) *Statistical Models* covers everything we cover and much more.
+* G. Casella and R.L Berger (1990) *Statistical Inference* covers many of the topics in greater mathematical depth.
+* Daniel Kahneman's *Thinking Fast and Slow* has alot of interesting things to say about statistical reasoning, and the built in flaws in how we humans tend to reason and make inferences. 
+
+If you need to brush up on basic matrix algebra and multivariate calculus, you might want to have a look at:
+
+* [Basic matrix algebra](http://www.sosmath.com/matrix/matrix.html)
+* [Simple matrix differentiation](https://en.wikibooks.org/wiki/Econometric_Theory/Matrix_Differentiation)
+* [Simple explanation of multivariate Taylor expansion](https://mathinsight.org/taylors_theorem_multivariable_introduction)
+
+These are some data sets that you might need during the course:
+
+* [confound.txt](TOI/confound.txt)
+* [urchin.vol.dat](TOI/urchin.vol.dat)
+* [bccd.dat](TOI/bccd.dat)
+* [sh-H1N1.dat](TOI/sh-H1N1.dat)
+* [algae.dat](TOI/algae.dat)
+
+You can load them in R using code such as:
+```{r eval=FALSE}
+dat <- read.table("https://mfasiolo.github.io/TOI/confound.txt")
+```
+  
     
