@@ -52,6 +52,7 @@ dat <- read.table("https://mfasiolo.github.io/TOI/confound.txt")
 Here is some code that we will use:
 
 * [Bayes_conv.R](TOI/Bayes_conv.R)
+* [Bootstrap.R](TOI/Bootstrap.R)
 
 <br>   
 
