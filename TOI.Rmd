@@ -10,7 +10,7 @@ text-align: justify}
 
 <br> 
 
-The course instructor is [Matteo Fasiolo](http://www.bristol.ac.uk/maths/people/matteo-fasiolo/overview.html) (Fry GA.17). There are 2 lectures and one computer lab-based tutorial each week (see BB page for details). 20% of the course mark will be from an assessed practical project. The remaining 80% comes from a 2.5 hour exam consisting of 4 questions (no choice): an example is provided below. Tutorial sheet questions provide the best preparation for the exam. Office hours are XXX (see BB page).
+The course instructor is [Matteo Fasiolo](http://www.bristol.ac.uk/maths/people/matteo-fasiolo/overview.html) (Fry GA.17). There are 2 lectures and one computer lab-based tutorial each week (see BB page for details). 20% of the course mark will be from an assessed practical project. The remaining 80% comes from a 2.5 hour exam consisting of 4 questions (no choice). Tutorial sheet questions provide the best preparation for the exam. Office hours are Fridays 2 to 3pm (see BB page).
 
 <br> 
 
@@ -58,7 +58,7 @@ Here is some code that we will use:
 
 #### Group coursework
 
-The course work is different for MATH35600 and MATHM0019. The course work is to be completed in groups of three, to provide experience of team-working. You must arrange to be in a team with two others on the **same** course code as you (MATH35600 or MATHM0019). The coursework will be handed out on XXX. You should be sure to attend this lecture to pick up the coursework and register your work group (or to make sure that another group member did so for you). 
+The course work is different for MATH35600 and MATHM0019. The course work is to be completed in groups of three, to provide experience of team-working. You must arrange to be in a team with two others on the **same** course code as you (MATH35600 or MATHM0019). The coursework will be handed out on TBC. 
   
 The 2018 course work is here: 
 
