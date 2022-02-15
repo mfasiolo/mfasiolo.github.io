@@ -11,44 +11,18 @@
 
 <br>
 
-I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D and [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/). My other research interests are intractable likelihoods and importance sampling. 
+I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D. My other research interests are intractable likelihoods and importance sampling. 
+
+I am currently to supervising the work of the following PhD students:
+
+   - Daniel Ward, sponsored by Improbable and co-supervised by Mark Beaumont, Patrick Cannon and Sebastian Schmon;
+   - Euan Enticott, sponsored by EDF and co-supervised by Nick Whiteley and Yannig Goude;
+   - Hui Yan, sponsored by EDF and co-supervised by Haeran Cho and Yannig Goude; 
+   - Ben Griffiths, sponsored by EDF and co-supervised by Yannig Goude.
 
 Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
 
 <br>
 
 
-## News
 
-**Publications**
-
-  - March20: our paper titled "Fast calibrated additive quantile regression" has been accepted for publication on the Journal of the American Statistical Association (Theory and Methods). Many thanks to the reviewers for their constructive comments.
-
-  - May19: our paper titled "Scalable visualisation methods for modern Generalized Additive Models" has been [accepted](https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942) by the Journal of Computational and Graphical Statistics. The comments of three anonymous reviewers and an associate editor were extremely helpful in improving the paper.
-
-  - Sep18: we have arXived a new paper titled "Scalable visualisation methods for modern Generalized Additive Models". It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) R package.
-
-  - Aug18: as [Scott Sisson announced on Twitter](https://twitter.com/ABC_Research/status/1032218764719214592), the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled "Approximate methods for dynamic ecological models", where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. A free [Arxiv version](https://arxiv.org/abs/1511.02644) of the chapter is also available.
-  
-  - May18: our paper titled "An extended empirical saddlepoint approximation for intractable likelihoods" has been [published](https://projecteuclid.org/euclid.ejs/1527300140) on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.   
-
-**Training**  
-
-  - Sep19: I will deliver a 1-day GAM course [WhyR19](http://whyr.pl/2019/) conference in Warsaw. The material is freely available [here](https://github.com/mfasiolo/workshop_WARSAW19).  
-
-  - Sep19: I delivered a training course on GAM modelling at the [Euregio Summer School in Data Science](https://dsrschools19.events.unibz.it/program/) in Bolzano (Bozen). The material is [here](https://github.com/mfasiolo/workshop_BOZEN19).  
-
-  - Jun19: [Simon Wood](https://people.maths.bris.ac.uk/~sw15190/) and I are going to teach a one day course on additive modelling at the [RSS](https://www.rss.org.uk/RSS/Training/Public_courses/RSS/pro_dev/RSS_training_courses_sub/public_training.aspx?hkey=80752d6b-205c-4865-8068-ab827079ced2) in London.  
-
-  - Jul18: I have thought an introductory course on GAM modelling using the [mgcv](https://cran.r-project.org/web/packages/mgcv/index.html), [mgcViz](https://mfasiolo.github.io/mgcViz/index.html) and [qgam](http://mfasiolo.github.io/qgam/) R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed [here](https://www.youtube.com/watch?v=a6sTwkQGt3E&t=50s) and [here](https://www.youtube.com/watch?v=44UUBuF9RFM), while all the material (slides, exercises and solutions) can be found [here](https://github.com/mfasiolo/workshop_UseR18).  
-
-**Software**
-
-  - March20: a new version of the mgcViz R package is now on CRAN. The main new feature is methods for
-    computing and visualising the accumulated local effects of [Apley and Zhu, 2016](https://arxiv.org/abs/1612.08468) for GAMs. Such plots are particularly useful for multinomial regression models. 
-
-  - June19: a new version of the qgam R package has been release on CRAN. It features automatic loss smoothness selection, using the methods described in our [arXived paper](https://arxiv.org/abs/1707.03307).
-
-  - Jul18: the mgcViz R package has finally arrived on CRAN. It contains quite a lot of new visualizations and diagnostics for GAMs models, mostly implemented in ggplot2. 
-  
-  - May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new "Bayesian sandwich" calibration method can be found in our [arxived paper](https://arxiv.org/abs/1707.03307).

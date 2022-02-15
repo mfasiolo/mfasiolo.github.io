@@ -11,15 +11,24 @@
 
 
 
-<title>index.utf8</title>
+<title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.4/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -33,14 +42,9 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      </style>
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -53,32 +57,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 
@@ -88,10 +67,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -108,40 +83,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 52px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h2 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h3 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h4 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h5 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h6 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -169,7 +117,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -181,7 +129,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -192,10 +140,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -207,7 +168,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -285,28 +245,28 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fa fa-home"></span>
+    <span class="fas fa-home"></span>
      
     Home
   </a>
 </li>
 <li>
   <a href="publications.html">
-    <span class="fa fa-paper-plane"></span>
+    <span class="fas fa-paper-plane"></span>
      
     Publications
   </a>
 </li>
 <li>
   <a href="software.html">
-    <span class="fa fa-cubes"></span>
+    <span class="fas fa-cubes"></span>
      
     Software
   </a>
 </li>
 <li>
   <a href="Teaching.html">
-    <span class="fa fa-graduation-cap"></span>
+    <span class="fas fa-graduation-cap"></span>
      
     Teaching
   </a>
@@ -315,14 +275,14 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="Contact_me.html">
-    <span class="fa fa-envelope-o"></span>
+    <span class="fas fa-envelope-o"></span>
      
     Contact me
   </a>
 </li>
 <li>
   <a href="https://github.com/mfasiolo">
-    <span class="fa fa-github"></span>
+    <span class="fas fa-github"></span>
      
     GitHub
   </a>
@@ -332,7 +292,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -348,34 +308,16 @@ $(document).ready(function () {
 <img src="me_serious.jpg" alt="drawing" style="width:600px;"/>
 </center>
 <p><br></p>
-<p>I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&amp;D and <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a>. My other research interests are intractable likelihoods and importance sampling.</p>
+<p>I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&amp;D. My other research interests are intractable likelihoods and importance sampling.</p>
+<p>I am currently to supervising the work of the following PhD students:</p>
+<ul>
+<li>Daniel Ward, sponsored by Improbable and co-supervised by Mark Beaumont, Patrick Cannon and Sebastian Schmon;</li>
+<li>Euan Enticott, sponsored by EDF and co-supervised by Nick Whiteley and Yannig Goude;</li>
+<li>Hui Yan, sponsored by EDF and co-supervised by Haeran Cho and Yannig Goude;</li>
+<li>Ben Griffiths, sponsored by EDF and co-supervised by Yannig Goude.</li>
+</ul>
 <p>Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don’t hesitate to <a href="mailto:matteo.fasiolo@gmail.com">contact me</a>.</p>
 <p><br></p>
-</div>
-<div id="news" class="section level2">
-<h2>News</h2>
-<p><strong>Publications</strong></p>
-<ul>
-<li><p>March20: our paper titled “Fast calibrated additive quantile regression” has been accepted for publication on the Journal of the American Statistical Association (Theory and Methods). Many thanks to the reviewers for their constructive comments.</p></li>
-<li><p>May19: our paper titled “Scalable visualisation methods for modern Generalized Additive Models” has been <a href="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942">accepted</a> by the Journal of Computational and Graphical Statistics. The comments of three anonymous reviewers and an associate editor were extremely helpful in improving the paper.</p></li>
-<li><p>Sep18: we have arXived a new paper titled “Scalable visualisation methods for modern Generalized Additive Models”. It proposes new visual diagnostics and smooth effect plots for GAM models, and it briefly mentions their implementation in the <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> R package.</p></li>
-<li><p>Aug18: as <a href="https://twitter.com/ABC_Research/status/1032218764719214592">Scott Sisson announced on Twitter</a>, the Handbook of Approximate Bayesian Computation as finally been published! It contains a chapter from Simon Wood and I, titled “Approximate methods for dynamic ecological models”, where we compare Synthetic Likelihood and Approximate Bayesian Computation (ABC), in the context of a prey-predator model for the observed population dynamics of Fennoscandian voles. A free <a href="https://arxiv.org/abs/1511.02644">Arxiv version</a> of the chapter is also available.</p></li>
-<li><p>May18: our paper titled “An extended empirical saddlepoint approximation for intractable likelihoods” has been <a href="https://projecteuclid.org/euclid.ejs/1527300140">published</a> on the Electronic Journal of Statistics. Many thanks to two anonimous reviewers and to the editors for their responsiveness.</p></li>
-</ul>
-<p><strong>Training</strong></p>
-<ul>
-<li><p>Sep19: I will deliver a 1-day GAM course <a href="http://whyr.pl/2019/">WhyR19</a> conference in Warsaw. The material is freely available <a href="https://github.com/mfasiolo/workshop_WARSAW19">here</a>.</p></li>
-<li><p>Sep19: I delivered a training course on GAM modelling at the <a href="https://dsrschools19.events.unibz.it/program/">Euregio Summer School in Data Science</a> in Bolzano (Bozen). The material is <a href="https://github.com/mfasiolo/workshop_BOZEN19">here</a>.</p></li>
-<li><p>Jun19: <a href="https://people.maths.bris.ac.uk/~sw15190/">Simon Wood</a> and I are going to teach a one day course on additive modelling at the <a href="https://www.rss.org.uk/RSS/Training/Public_courses/RSS/pro_dev/RSS_training_courses_sub/public_training.aspx?hkey=80752d6b-205c-4865-8068-ab827079ced2">RSS</a> in London.</p></li>
-<li><p>Jul18: I have thought an introductory course on GAM modelling using the <a href="https://cran.r-project.org/web/packages/mgcv/index.html">mgcv</a>, <a href="https://mfasiolo.github.io/mgcViz/index.html">mgcViz</a> and <a href="http://mfasiolo.github.io/qgam/">qgam</a> R packages at the UseR18 conference in Brisbane. The course was recorded and can be viewed <a href="https://www.youtube.com/watch?v=a6sTwkQGt3E&amp;t=50s">here</a> and <a href="https://www.youtube.com/watch?v=44UUBuF9RFM">here</a>, while all the material (slides, exercises and solutions) can be found <a href="https://github.com/mfasiolo/workshop_UseR18">here</a>.</p></li>
-</ul>
-<p><strong>Software</strong></p>
-<ul>
-<li><p>March20: a new version of the mgcViz R package is now on CRAN. The main new feature is methods for computing and visualising the accumulated local effects of <a href="https://arxiv.org/abs/1612.08468">Apley and Zhu, 2016</a> for GAMs. Such plots are particularly useful for multinomial regression models.</p></li>
-<li><p>June19: a new version of the qgam R package has been release on CRAN. It features automatic loss smoothness selection, using the methods described in our <a href="https://arxiv.org/abs/1707.03307">arXived paper</a>.</p></li>
-<li><p>Jul18: the mgcViz R package has finally arrived on CRAN. It contains quite a lot of new visualizations and diagnostics for GAMs models, mostly implemented in ggplot2.</p></li>
-<li><p>May18: the new CRAN version of qgam implements a new calibration method which makes estimation of quantile GAM models around 10 times faster the under the previous package version. The details on the new “Bayesian sandwich” calibration method can be found in our <a href="https://arxiv.org/abs/1707.03307">arxived paper</a>.</p></li>
-</ul>
 </div>
 
 
@@ -387,7 +329,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -405,7 +347,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
