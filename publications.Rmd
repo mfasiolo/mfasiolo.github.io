@@ -3,15 +3,17 @@
 
 #### Articles on Generalized Additive Models: methods and applications
 
+   - Gioia, V., Fasiolo, M., Browell, J. and Bellio, R., 2022. Additive covariance matrix models: modelling regional electricity net-demand in great britain. arXiv preprint arXiv:2211.07451.
+
    - Browell, J. and Fasiolo, M., 2021. Probabilistic Forecasting of Regional Net-load with Conditional Extremes and Gridded NWP. IEEE Transactions on Smart Grid, 12(6), pp.5011-5019.
 
-   - Amara-Ouali, Y., Fasiolo, M., Goude, Y. and Yan, H., 2021. Daily peak electrical load forecasting with a multi-resolution approach. arXiv preprint arXiv:2112.04492.
+   - Amara-Ouali, Y., Fasiolo, M., Goude, Y. and Yan, H., 2022. Daily peak electrical load forecasting with a multi-resolution approach. International Journal of Forecasting. arXiv preprint arXiv:2112.04492.
 
    - Capezza, C., Palumbo, B., Goude, Y., Wood, S.N. and Fasiolo, M., 2021. Additive stacking for disaggregate electricity demand forecasting. The Annals of Applied Statistics, 15(2), pp.727-746.
 
    - Fasiolo, M., Wood, S.N., Zaffran, M., Nedellec, R. and Goude, Y., 2021. Fast calibrated additive quantile regression. Journal of the American Statistical Association, 116(535), pp.1402-1412.
    
-   - Fasiolo, M., Wood, S. N., Zaffran, M., Nedellec, R., & Goude, Y. (2021). qgam: Bayesian Nonparametric Quantile Regression Modeling in R. Journal of Statistical Software, 100(9), 1–31. https://doi.org/10.18637/jss.v100.i09
+   - Fasiolo, M., Wood, S. N., Zaffran, M., Nedellec, R., & Goude, Y. 2021. qgam: Bayesian Nonparametric Quantile Regression Modeling in R. Journal of Statistical Software, 100(9), 1–31. https://doi.org/10.18637/jss.v100.i09
 
    - Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2019. Scalable visualisation methods for modern Generalized Additive Models. Journal of Computational and Graphical Statistics.
 
@@ -21,11 +23,11 @@
    
 #### Articles on Monte Carlo methods and intractable likelihoods
 
+   - Ward, D., Cannon, P., Beaumont, M., Fasiolo, M. and Schmon, S.M., 2022. Robust Neural Posterior Estimation and Statistical Model Criticism. Accepted at NeuIPS 2022. arXiv preprint arXiv:2210.06564.
+
    - Fasiolo, M., de Melo, F.E. and Maskell, S., 2018. Langevin incremental mixture importance sampling. Statistics and Computing, 28(3), pp.549-561.
    
    - Fasiolo, M., Wood, S.N., Hartig, F. and Bravington, M.V., 2018. An extended empirical saddlepoint approximation for intractable likelihoods. Electronic Journal of Statistics, 12(1), pp.1544-1578.
-   
-   - Fasiolo, M. and Wood, S.N., 2018. ABC in ecological modelling. In Handbook of Approximate Bayesian Computation (pp. 597-622). Chapman and Hall/CRC.
    
    - Fasiolo, M., Pya, N. and Wood, S.N., 2016. A comparison of inferential methods for highly nonlinear state space models in ecology and epidemiology. Statistical Science, 31(1), pp.96-118.
    
@@ -33,7 +35,7 @@
 
 #### Interdisciplinary publications
 
-   - Baayen, R.H., Fasiolo, M., Wood, S. and Chuang, Y.Y., 2021. A note on the modeling of the effects of experimental time in psycholinguistic experiments. arXiv preprint arXiv:2105.13786.
+   - Baayen, R.H., Fasiolo, M., Wood, S. and Chuang, Y.Y., 2022. A note on the modeling of the effects of experimental time in psycholinguistic experiments. The Mental Lexicon. arXiv preprint arXiv:2105.13786.
 
    - De Rosa, D., Basso, B., Fasiolo, M., Friedl, J., Fulkerson, B., Grace, P.R. and Rowlings, D.W., 2021. Predicting pasture biomass using a statistical model and machine learning algorithm implemented with remotely sensed imagery. Computers and Electronics in Agriculture, 180, p.105880.
 

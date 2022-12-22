@@ -13,8 +13,8 @@
 
 <title>Contact_me.knit</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -234,7 +238,7 @@ $(document).ready(function () {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,28 +249,28 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
     Home
   </a>
 </li>
 <li>
   <a href="publications.html">
-    <span class="fas fa-paper-plane"></span>
+    <span class="fa fa-paper-plane"></span>
      
     Publications
   </a>
 </li>
 <li>
   <a href="software.html">
-    <span class="fas fa-cubes"></span>
+    <span class="fa fa-cubes"></span>
      
     Software
   </a>
 </li>
 <li>
   <a href="Teaching.html">
-    <span class="fas fa-graduation-cap"></span>
+    <span class="fa fa-graduation-cap"></span>
      
     Teaching
   </a>
@@ -275,14 +279,14 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="Contact_me.html">
-    <span class="fas fa-envelope-o"></span>
+    <span class="fa fa-envelope-o"></span>
      
     Contact me
   </a>
 </li>
 <li>
   <a href="https://github.com/mfasiolo">
-    <span class="fas fa-github"></span>
+    <span class="fa fa-github"></span>
      
     GitHub
   </a>
@@ -303,14 +307,15 @@ $(document).ready(function () {
 <p><br></p>
 <p><img src="phone.jpg" width="55%" style="display: block; margin: auto;" /></p>
 <center>
-<a href="mailto:matteo.fasiolo@bristol.ac.uk"><i class="fa fa-envelope-o"></i></a>     <a href="http://www.bristol.ac.uk/maths/people/matteo-fasiolo/index.html"><i class="fa fa-institution"></i></a>    <a href="https://scholar.google.co.uk/citations?user=lu4oHaUAAAAJ&amp;hl=en"><i class="fa fa-graduation-cap"></i></a>    <a href="https://twitter.com/fasiolo1985"><i class="fa fa-twitter"></i></a>
+<a
+href="mailto:matteo.fasiolo@bristol.ac.uk"><i class="fa fa-envelope-o"></i></a>
+    <a
+href="https://www.bristol.ac.uk/people/person/Matteo-Fasiolo-93751fc1-23df-4042-8831-134c110d7526/"><i class="fa fa-institution"></i></a>
+   <a
+href="https://scholar.google.co.uk/citations?user=lu4oHaUAAAAJ&amp;hl=en"><i class="fa fa-graduation-cap"></i></a>
+   <a
+href="https://twitter.com/fasiolo1985"><i class="fa fa-twitter"></i></a>
 </center>
-<center>
-<p><a href="CV.pdf#" class="download" title="CV">Curriculum Vitae</a></p>
-<p><br> <br></p>
-<p><br></p>
-<a class="twitter-timeline" data-width="400" data-height="400" href="https://twitter.com/fasiolo1985?ref_src=twsrc%5Etfw">Tweets by fasiolo1985</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 

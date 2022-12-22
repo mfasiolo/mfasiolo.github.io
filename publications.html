@@ -13,8 +13,8 @@
 
 <title>publications.knit</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -234,7 +238,7 @@ $(document).ready(function () {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,28 +249,28 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
     Home
   </a>
 </li>
 <li>
   <a href="publications.html">
-    <span class="fas fa-paper-plane"></span>
+    <span class="fa fa-paper-plane"></span>
      
     Publications
   </a>
 </li>
 <li>
   <a href="software.html">
-    <span class="fas fa-cubes"></span>
+    <span class="fa fa-cubes"></span>
      
     Software
   </a>
 </li>
 <li>
   <a href="Teaching.html">
-    <span class="fas fa-graduation-cap"></span>
+    <span class="fa fa-graduation-cap"></span>
      
     Teaching
   </a>
@@ -275,14 +279,14 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="Contact_me.html">
-    <span class="fas fa-envelope-o"></span>
+    <span class="fa fa-envelope-o"></span>
      
     Contact me
   </a>
 </li>
 <li>
   <a href="https://github.com/mfasiolo">
-    <span class="fas fa-github"></span>
+    <span class="fa fa-github"></span>
      
     GitHub
   </a>
@@ -301,36 +305,83 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<div id="articles-on-generalized-additive-models-methods-and-applications" class="section level4">
-<h4>Articles on Generalized Additive Models: methods and applications</h4>
+<div
+id="articles-on-generalized-additive-models-methods-and-applications"
+class="section level4">
+<h4>Articles on Generalized Additive Models: methods and
+applications</h4>
 <ul>
-<li><p>Browell, J. and Fasiolo, M., 2021. Probabilistic Forecasting of Regional Net-load with Conditional Extremes and Gridded NWP. IEEE Transactions on Smart Grid, 12(6), pp.5011-5019.</p></li>
-<li><p>Amara-Ouali, Y., Fasiolo, M., Goude, Y. and Yan, H., 2021. Daily peak electrical load forecasting with a multi-resolution approach. arXiv preprint arXiv:2112.04492.</p></li>
-<li><p>Capezza, C., Palumbo, B., Goude, Y., Wood, S.N. and Fasiolo, M., 2021. Additive stacking for disaggregate electricity demand forecasting. The Annals of Applied Statistics, 15(2), pp.727-746.</p></li>
-<li><p>Fasiolo, M., Wood, S.N., Zaffran, M., Nedellec, R. and Goude, Y., 2021. Fast calibrated additive quantile regression. Journal of the American Statistical Association, 116(535), pp.1402-1412.</p></li>
-<li><p>Fasiolo, M., Wood, S. N., Zaffran, M., Nedellec, R., &amp; Goude, Y. (2021). qgam: Bayesian Nonparametric Quantile Regression Modeling in R. Journal of Statistical Software, 100(9), 1–31. <a href="https://doi.org/10.18637/jss.v100.i09" class="uri">https://doi.org/10.18637/jss.v100.i09</a></p></li>
-<li><p>Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2019. Scalable visualisation methods for modern Generalized Additive Models. Journal of Computational and Graphical Statistics.</p></li>
-<li><p>Wood, S.N. and Fasiolo, M., 2017. A generalized Fellner‐Schall method for smoothing parameter optimization with application to Tweedie location, scale and shape models. Biometrics, 73(4), pp.1071-1081.</p></li>
+<li><p>Gioia, V., Fasiolo, M., Browell, J. and Bellio, R., 2022.
+Additive covariance matrix models: modelling regional electricity
+net-demand in great britain. arXiv preprint arXiv:2211.07451.</p></li>
+<li><p>Browell, J. and Fasiolo, M., 2021. Probabilistic Forecasting of
+Regional Net-load with Conditional Extremes and Gridded NWP. IEEE
+Transactions on Smart Grid, 12(6), pp.5011-5019.</p></li>
+<li><p>Amara-Ouali, Y., Fasiolo, M., Goude, Y. and Yan, H., 2022. Daily
+peak electrical load forecasting with a multi-resolution approach.
+International Journal of Forecasting. arXiv preprint
+arXiv:2112.04492.</p></li>
+<li><p>Capezza, C., Palumbo, B., Goude, Y., Wood, S.N. and Fasiolo, M.,
+2021. Additive stacking for disaggregate electricity demand forecasting.
+The Annals of Applied Statistics, 15(2), pp.727-746.</p></li>
+<li><p>Fasiolo, M., Wood, S.N., Zaffran, M., Nedellec, R. and Goude, Y.,
+2021. Fast calibrated additive quantile regression. Journal of the
+American Statistical Association, 116(535), pp.1402-1412.</p></li>
+<li><p>Fasiolo, M., Wood, S. N., Zaffran, M., Nedellec, R., &amp; Goude,
+Y. 2021. qgam: Bayesian Nonparametric Quantile Regression Modeling in R.
+Journal of Statistical Software, 100(9), 1–31. <a
+href="https://doi.org/10.18637/jss.v100.i09"
+class="uri">https://doi.org/10.18637/jss.v100.i09</a></p></li>
+<li><p>Fasiolo, M., Nedellec, R., Goude, Y. and Wood, S.N., 2019.
+Scalable visualisation methods for modern Generalized Additive Models.
+Journal of Computational and Graphical Statistics.</p></li>
+<li><p>Wood, S.N. and Fasiolo, M., 2017. A generalized Fellner‐Schall
+method for smoothing parameter optimization with application to Tweedie
+location, scale and shape models. Biometrics, 73(4),
+pp.1071-1081.</p></li>
 </ul>
 <p><br></p>
 </div>
-<div id="articles-on-monte-carlo-methods-and-intractable-likelihoods" class="section level4">
+<div id="articles-on-monte-carlo-methods-and-intractable-likelihoods"
+class="section level4">
 <h4>Articles on Monte Carlo methods and intractable likelihoods</h4>
 <ul>
-<li><p>Fasiolo, M., de Melo, F.E. and Maskell, S., 2018. Langevin incremental mixture importance sampling. Statistics and Computing, 28(3), pp.549-561.</p></li>
-<li><p>Fasiolo, M., Wood, S.N., Hartig, F. and Bravington, M.V., 2018. An extended empirical saddlepoint approximation for intractable likelihoods. Electronic Journal of Statistics, 12(1), pp.1544-1578.</p></li>
-<li><p>Fasiolo, M. and Wood, S.N., 2018. ABC in ecological modelling. In Handbook of Approximate Bayesian Computation (pp. 597-622). Chapman and Hall/CRC.</p></li>
-<li><p>Fasiolo, M., Pya, N. and Wood, S.N., 2016. A comparison of inferential methods for highly nonlinear state space models in ecology and epidemiology. Statistical Science, 31(1), pp.96-118.</p></li>
+<li><p>Ward, D., Cannon, P., Beaumont, M., Fasiolo, M. and Schmon, S.M.,
+2022. Robust Neural Posterior Estimation and Statistical Model
+Criticism. Accepted at NeuIPS 2022. arXiv preprint
+arXiv:2210.06564.</p></li>
+<li><p>Fasiolo, M., de Melo, F.E. and Maskell, S., 2018. Langevin
+incremental mixture importance sampling. Statistics and Computing,
+28(3), pp.549-561.</p></li>
+<li><p>Fasiolo, M., Wood, S.N., Hartig, F. and Bravington, M.V., 2018.
+An extended empirical saddlepoint approximation for intractable
+likelihoods. Electronic Journal of Statistics, 12(1),
+pp.1544-1578.</p></li>
+<li><p>Fasiolo, M., Pya, N. and Wood, S.N., 2016. A comparison of
+inferential methods for highly nonlinear state space models in ecology
+and epidemiology. Statistical Science, 31(1), pp.96-118.</p></li>
 </ul>
 <p><br></p>
 </div>
 <div id="interdisciplinary-publications" class="section level4">
 <h4>Interdisciplinary publications</h4>
 <ul>
-<li><p>Baayen, R.H., Fasiolo, M., Wood, S. and Chuang, Y.Y., 2021. A note on the modeling of the effects of experimental time in psycholinguistic experiments. arXiv preprint arXiv:2105.13786.</p></li>
-<li><p>De Rosa, D., Basso, B., Fasiolo, M., Friedl, J., Fulkerson, B., Grace, P.R. and Rowlings, D.W., 2021. Predicting pasture biomass using a statistical model and machine learning algorithm implemented with remotely sensed imagery. Computers and Electronics in Agriculture, 180, p.105880.</p></li>
-<li><p>Noacco, V., Duffy, C. J., Wagener, T., Worrall, F., Fasiolo, M. and Howden, N.J.K. (2019). Drivers of inter-and intra-annual variability of dissolved organic carbon concentration in the River Thames between 1884 and 2013. Hydrological processes. 33 (6), 994-1012.</p></li>
-<li><p>Tomaschek, F., Tucker, B.V., Fasiolo, M. and Baayen, R.H., 2018. Practice makes perfect: The consequences of lexical proficiency for articulation. Linguistics Vanguard, 4(s2).</p></li>
+<li><p>Baayen, R.H., Fasiolo, M., Wood, S. and Chuang, Y.Y., 2022. A
+note on the modeling of the effects of experimental time in
+psycholinguistic experiments. The Mental Lexicon. arXiv preprint
+arXiv:2105.13786.</p></li>
+<li><p>De Rosa, D., Basso, B., Fasiolo, M., Friedl, J., Fulkerson, B.,
+Grace, P.R. and Rowlings, D.W., 2021. Predicting pasture biomass using a
+statistical model and machine learning algorithm implemented with
+remotely sensed imagery. Computers and Electronics in Agriculture, 180,
+p.105880.</p></li>
+<li><p>Noacco, V., Duffy, C. J., Wagener, T., Worrall, F., Fasiolo, M.
+and Howden, N.J.K. (2019). Drivers of inter-and intra-annual variability
+of dissolved organic carbon concentration in the River Thames between
+1884 and 2013. Hydrological processes. 33 (6), 994-1012.</p></li>
+<li><p>Tomaschek, F., Tucker, B.V., Fasiolo, M. and Baayen, R.H., 2018.
+Practice makes perfect: The consequences of lexical proficiency for
+articulation. Linguistics Vanguard, 4(s2).</p></li>
 </ul>
 </div>
 

@@ -58,7 +58,7 @@ Here is some code that we will use:
 
 #### Group coursework
 
-The course work is different for MATH35600 and MATHM0019. The course work is to be completed in groups of three, to provide experience of team-working. You must arrange to be in a team with two others on the **same** course code as you (MATH35600 or MATHM0019). The coursework will be handed out on TBC. 
+The course work is different for MATH35600 and MATHM0019. The course work is to be completed in groups, to provide experience of team-working. You must arrange to be in a team with other students on the **same** course code as you (MATH35600 or MATHM0019). The coursework will be handed out on TBC. 
   
 The 2018 course work is here: 
 

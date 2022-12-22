@@ -11,14 +11,15 @@
 
 <br>
 
-I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. The main application I am currently focusing on is electricity demand forecasting, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D. My other research interests are intractable likelihoods and importance sampling. 
+I am a statistician working on Generalized Additive Models (GAMs) at the University of Bristol. Broadly, my research aims at developing new statistical methodology and software (mainly R packages) for tackling interesting scientific and industrial problems. I am particularly interested in forecasting applications in the electricity industry, and this part of my work is performed in collaboration with Électricité de France (EDF) R&D. My other research interests are intractable likelihoods and importance sampling. 
 
-I am currently to supervising the work of the following PhD students:
+I am currently to supervising the following PhD students:
 
-   - Daniel Ward, sponsored by Improbable and co-supervised by Mark Beaumont, Patrick Cannon and Sebastian Schmon;
+   - Daniel Ward, sponsored by Improbable.io and co-supervised by Mark Beaumont, Patrick Cannon and Sebastian Schmon;
    - Euan Enticott, sponsored by EDF and co-supervised by Nick Whiteley and Yannig Goude;
    - Hui Yan, sponsored by EDF and co-supervised by Haeran Cho and Yannig Goude; 
    - Ben Griffiths, sponsored by EDF and co-supervised by Yannig Goude.
+   - Xinyue Guan, co-supervised by Haeran Cho.
 
 Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
 
