@@ -1,5 +1,7 @@
 
 <br> 
+<br>
+<br>
 
 #### Articles on Generalized Additive Models: methods and applications
 

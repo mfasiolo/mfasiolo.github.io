@@ -5,6 +5,8 @@ text-align: justify}
 </style>
 
 <br> 
+<br> 
+<br> 
 
 # Theory of Inference MATH35600/MATHM0019
 
