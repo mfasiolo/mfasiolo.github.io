@@ -31,7 +31,7 @@ The following packages are part of the output of my research on GAM models:
    
    - **gamstackr**: extension of mgcv for fitting stacking (aggregations of experts) models with dynamic weights. Mostly written by Euan Enticott and available [here](https://github.com/eenticott/gamstackr).
    
-   - **gamfactory**: extension of mgcv for fitting GAM models with nested effects and for creating new family of distributions. Written in collaboration with Claudian Collarin and Christian Capezza, and available [here](https://github.com/mfasiolo/gamFactory).
+   - **gamfactory**: extension of mgcv for fitting GAM models with nested effects and for creating new family of distributions. Written in collaboration with Claudia Collarin and Christian Capezza, and available [here](https://github.com/mfasiolo/gamFactory).
    
 
 ### Monte Carlo methods and intractable likelihoods
