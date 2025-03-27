@@ -27,6 +27,13 @@ The following packages are part of the output of my research on GAM models:
 <br>
 <br>
 
+   - **SCM**: extension of mgcv for fitting multivariate Gaussian GAMs with dynamic covariance matrices in R.  Mostly written by Vincenzo Gioia and available [here](https://github.com/VinGioia90/SCM).
+   
+   - **gamstackr**: extension of mgcv for fitting stacking (aggregations of experts) models with dynamic weights. Mostly written by Euan Enticott and available [here](https://github.com/eenticott/gamstackr).
+   
+   - **gamfactory**: extension of mgcv for fitting GAM models with nested effects and for creating new family of distributions. Written in collaboration with Claudian Collarin and Christian Capezza, and available [here](https://github.com/mfasiolo/gamFactory).
+   
+
 ### Monte Carlo methods and intractable likelihoods
    
 I have also authored the following packages, related to my research on Monte Carlo methods and intractable likelihoods:

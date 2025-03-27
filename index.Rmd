@@ -17,11 +17,17 @@ I am a statistician working on Generalized Additive Models (GAMs) at the Univers
 
 I am currently to supervising the following PhD students:
 
-   - Daniel Ward, sponsored by Improbable.io and co-supervised by Mark Beaumont, Patrick Cannon and Sebastian Schmon;
-   - Euan Enticott, sponsored by EDF and co-supervised by Nick Whiteley and Yannig Goude;
-   - Hui Yan, sponsored by EDF and co-supervised by Haeran Cho and Yannig Goude; 
-   - Ben Griffiths, sponsored by EDF and co-supervised by Yannig Goude.
-   - Xinyue Guan, co-supervised by Haeran Cho.
+   - Xuan Zhan;
+   - Aindrila Garai (sponsored by EDF and co-supervised by Yannig Goude);
+   - Ben Griffiths (sponsored by EDF and co-supervised by Yannig Goude);
+   - Xinyue Guan (co-supervised by Haeran Cho).
+   
+Former PhD students:
+
+   - Euan Enticott (sponsored by EDF and co-supervised Christian Capezza and Yannig Goude);
+   - Daniel Ward (sponsored by Improbable.io and co-supervised by Mark Beaumont, Patrick Cannon and Sebastian Schmon);
+   - Vincenzo Gioia (co-supervised by Ruggero Bellio);
+   - Claudia Collarin (co-supervised by Bruno Scarpa);
 
 Beside doing research, I enjoy teaching short courses on GAM modelling, so if you are interested in organizing one don't hesitate to [contact me](mailto:matteo.fasiolo@gmail.com).
 

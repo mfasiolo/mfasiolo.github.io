@@ -5,11 +5,11 @@
 
 #### Articles on Generalized Additive Models: methods and applications
 
-   - Gioia, V., Fasiolo, M., Browell, J. and Bellio, R., 2022. Additive covariance matrix models: modelling regional electricity net-demand in great britain. arXiv preprint arXiv:2211.07451.
+   - Gioia, V., Fasiolo, M., Browell, J. and Bellio, R., 2024. Additive Covariance Matrix Models: Modeling Regional Electricity Net-Demand in Great Britain. Journal of the American Statistical Association, pp.1-13.
+   
+   - Amara-Ouali, Yvenn, Matteo Fasiolo, Yannig Goude, and Hui Yan. "Daily peak electrical load forecasting with a multi-resolution approach." International Journal of Forecasting 39, no. 3 (2023): 1272-1286.
 
    - Browell, J. and Fasiolo, M., 2021. Probabilistic Forecasting of Regional Net-load with Conditional Extremes and Gridded NWP. IEEE Transactions on Smart Grid, 12(6), pp.5011-5019.
-
-   - Amara-Ouali, Y., Fasiolo, M., Goude, Y. and Yan, H., 2022. Daily peak electrical load forecasting with a multi-resolution approach. International Journal of Forecasting. arXiv preprint arXiv:2112.04492.
 
    - Capezza, C., Palumbo, B., Goude, Y., Wood, S.N. and Fasiolo, M., 2021. Additive stacking for disaggregate electricity demand forecasting. The Annals of Applied Statistics, 15(2), pp.727-746.
 
@@ -23,9 +23,11 @@
    
 <br>
    
-#### Articles on Monte Carlo methods and intractable likelihoods
+#### Articles on Monte Carlo methods, intractable likelihoods and other topics
 
-   - Ward, D., Cannon, P., Beaumont, M., Fasiolo, M. and Schmon, S.M., 2022. Robust Neural Posterior Estimation and Statistical Model Criticism. Accepted at NeuIPS 2022. arXiv preprint arXiv:2210.06564.
+   - Ward, D., Beaumont, M. and Fasiolo, M., 2024. SoftCVI: Contrastive variational inference with self-generated soft labels. Accepted as a "spotlight" paper at ICLR 2025, arXiv preprint arXiv:2407.15687.
+
+   - Ward, D., Cannon, P., Beaumont, M., Fasiolo, M. and Schmon, S., 2022. Robust neural posterior estimation and statistical model criticism. Advances in Neural Information Processing Systems, 35, pp.33845-33859.
 
    - Fasiolo, M., de Melo, F.E. and Maskell, S., 2018. Langevin incremental mixture importance sampling. Statistics and Computing, 28(3), pp.549-561.
    
@@ -37,7 +39,11 @@
 
 #### Interdisciplinary publications
 
-   - Baayen, R.H., Fasiolo, M., Wood, S. and Chuang, Y.Y., 2022. A note on the modeling of the effects of experimental time in psycholinguistic experiments. The Mental Lexicon. arXiv preprint arXiv:2105.13786.
+   - De Rosa, D., Ballabio, C., Lugato, E., Fasiolo, M., Jones, A. and Panagos, P., 2024. Soil organic carbon stocks in European croplands and grasslands: How much have we lost in the past decade?. Global Change Biology, 30(1), p.e16992.
+   
+  - de Vilmarest, J., Browell, J., Fasiolo, M., Goude, Y. and Wintenberger, O., 2023. Adaptive probabilistic forecasting of electricity (net-) load. IEEE Transactions on Power Systems, 39(2), pp.4154-4163.
+
+   - Baayen, R.H., Fasiolo, M., Wood, S. and Chuang, Y.Y., 2022. A note on the modeling of the effects of experimental time in psycholinguistic experiments. The Mental Lexicon, 17(2), pp.178-212. arXiv preprint arXiv:2105.13786.
 
    - De Rosa, D., Basso, B., Fasiolo, M., Friedl, J., Fulkerson, B., Grace, P.R. and Rowlings, D.W., 2021. Predicting pasture biomass using a statistical model and machine learning algorithm implemented with remotely sensed imagery. Computers and Electronics in Agriculture, 180, p.105880.
 
